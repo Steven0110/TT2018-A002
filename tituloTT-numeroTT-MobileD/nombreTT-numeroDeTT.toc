@@ -7,6 +7,6 @@
 \contentsline {section}{\numberline {1.6}Justificaci\IeC {\'o}n}{1}
 \contentsline {chapter}{\numberline {2}Marco Te\IeC {\'o}rico }{2}
 \contentsline {section}{\numberline {2.1}Realidad Aumentada}{2}
-\contentsline {section}{\numberline {2.2}Plataformas De Realidad Aumentada}{2}
-\contentsline {chapter}{\numberline {3}Bibliograf\'ia}{3}
-\contentsline {section}{\numberline {3.1}Fuentes}{3}
+\contentsline {section}{\numberline {2.2}Plataformas De Realidad Aumentada}{3}
+\contentsline {chapter}{\numberline {3}Bibliograf\'ia}{4}
+\contentsline {section}{\numberline {3.1}Fuentes}{4}
