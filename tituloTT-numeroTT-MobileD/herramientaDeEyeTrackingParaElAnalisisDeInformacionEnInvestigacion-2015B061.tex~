@@ -1,0 +1,55 @@
+%%%%%%   TIPO DE DOCUMENTO: Reporte   %%%%%%
+\documentclass[letterpaper,11pt]{report}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%   PAQUETES   %%%%%%%
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%   INICIO DEL DOCUMENTO   %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+    %%%%%%% Renombrar en espaNol %%%%%%
+    \renewcommand{\tablename}{Tabla} %Escribe Tabla en lugar de Cuadro
+    \renewcommand{\listtablename}{\'Indice de tablas} %Escribe Indeice de tablas en lugar de Indice de cuadros
+
+    %%%%%%%   PORTADA   y RESUMEN   %%%%%%%
+    \input{portada} %incluye el archivo portada.tex
+    \include{resumen} %Incluir resumen del documento (resumen.tex)
+
+    %%%%%%%   INCLUIR ENCABEZADOS EN INDICES Y CAPITULOS   %%%%%%%
+    \pagestyle{headings}
+
+    %%%%%%%   NUMERACION EN CONTENIDO E INDICE DE TABLAS Y FIGURAS   %%%%%%%
+    \pagenumbering{roman} %NUmeros romanos
+    %\setcounter{page}{1} %Comienza en I por default, aquI se puedo modificar
+
+    %%%%%%   INCLUIR CONTENIDO, INDICE DE FIGURAS E INDICE DE TABLAS   %%%%%%
+    \tableofcontents
+    \listoffigures
+    \listoftables
+
+    %%%%%%%   NUMERACION EN CAPITULOS   %%%%%%%
+    \clearpage %Para iniciar con los arAbigos
+    \pagenumbering{arabic} %Numeros arabigos
+    %\setcounter{page}{1} %Comienza en 1 por default, aquI se puede modificar
+
+    %%%%%%%   INCLUYE CAPITULOS Y SECCIONES   %%%%%%%
+    \input{./introduccion/introduccion}
+	   \input{./introduccion/secciones/contextoDeTrabajo}
+	   \input{./introduccion/secciones/problematica}
+	   \input{./introduccion/secciones/trabajoPrevio}
+	   \input{./introduccion/secciones/solucionPropuesta}
+	   \input{./introduccion/secciones/objetivos}
+	   \input{./introduccion/secciones/justificacion}
+    \input{./marcoTeorico/marco} %CapItulo 2 (capitulo2.tex)
+	   \input{./marcoTeorico/secciones/eyeTracking}
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%    FIN DEL DOCUMENTO    %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
