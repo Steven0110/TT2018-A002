@@ -25,15 +25,81 @@ ARCore es la plataforma de Google para construir experiencias de realidad aument
 ARCore tiene nueve pilares básicos que permiten integrar contenido virtual en el entorno real, por medio de la cámara de un dispositivo móvil:
 
 \begin{itemize}
-	\item \textbf{Rastreo de movimiento}.- Permite al teléfono celular entender y rastrear su posición realtiva al mundo real.
+	\item \textbf{Rastreo de movimiento}.- Cuando el celular se mueve a través del mundo real, ARCore usa un proceso llamado \textbf{Odometría concurrente y mapeo} o simplemente \textbf{COM}, para entender en qué posición se encuentra con respecto al entorno. ARCore detecta visualmente distintas características en las imágenes capturadas por la cámara para definir puntos llamados \textbf{puntos característicos}, a partir de los cuales virtualmente genera una maya de puntos, y los usa para computar el cambio físico de su posición. Esto se combina con mediciones realizadas por el teléfono para determinar la posición y la orientación de la cámara relativa al mundo en tiempo real.
 	
-	\item \textbf{Entendimiento ambiental}.- Permite al dispositivo móvil detectar el tamaño y localización de todo tipo de superficies: horizontales, verticales y angulares como el suelo, una mesa de café o muros.
+	\item \textbf{Entendimiento ambiental}.- ARCore trata de identificar una maya de puntos coincidentes dentro de una misma superficies, como una mesa, el suelo o un muro, y hace que cada una de estas superficies detectadas esté disponible como un \textbf{plano}. ARCore también es capaz de detectar los límites de cada plano y convertir esto en información útil para las aplicaciones, de tal forma que sea posible posicionar objetos virtualmente sobre cada uno de estos planos. Debido a que ARCore usa puntos característicos para detectar planos, superficies sin texturas como parades blancas pueden no ser detectadas apropiadamente.
 	
-	\item \textbf{Estimación de luz}.- Permite realizar una estimación de la cantidad de luz en el ambiente.
+	\item \textbf{Estimación de luz}.- ARCore puede detectas información sobre la iluminación del entorno y proveer a la cámara de dispositivo móvil de una correción de color y gamma, para lograr una imágen óptima. Esta información permite variar la iluminación de una habitación y ver cómo la iluminación también varía en los elementos virtuales, aumentando la sensación de realismo.
+	
+	\item \textbf{Interacción con el usuario}.- Una vez que se ha definido la maya de puntos, ARCore permite que el usuario interactúe con el entorno visualizado en la cámara del dispositivo. El usuario puede hacer tap, o realizar gestos con los dedos sobre la pantalla del móvil, y ARCore tiene la capacidad de interpretar y transportar éstas acciones al entorno virtual, por ejemplo, el usuario puede agregar un objeto en alguna superficie al tocar la pantalla del dispositivo con el dedo, tras esto se hace una cálculo de las coordenadas relativas X, Y del plano donde se va a agregar el objeto, y finalmente el objeto es mostrado a través de la cámara.
+	
+	\item \textbf{Puntos de orientación}.- Los puntos de orientación permiten colocar objetos virtuales en superficies inclinadas. Cuando se está detectando la maya de puntos y se detectan superficies cercanas con diferente ángulo, ARCore se encarga de calcular el ángulo de inclinación de tal superficie.
+	
+	\item \textbf{Anclas y rastreables}.- La posición y orientación puede cambiar conforme ARCore mejora su entendimiendo del entorno. Cuando se quiere posicionar un objeto virtual, se requiere definir una ancla para asegurar que su posición sea rastreada en tiempo real. Los planos y puntos son un tipo de objeto especial denominado \textbf{rastreable}. Como su nombre sugiere, son objetos que ARCore estará rastreando a lo largo del tiempo. Es posible anclar objetos a rastrables, de tal forma que estos objetos virtuales van a conservar su posición relativa en el mundo, no importando si la cámara se mueve e inclusive si estos salen del foco de visualización.
+	
+	\item \textbf{Imágenes aumentadas}.- Las imágenes aumentadas permiten desarrollar aplicaciones de realidad aumentada que puedan responder a imagenes en 2D específicas como paquetes o posters de películas. Los usuarios pueden tener experiencias de realidad aumentada cuando ellos enfocan la cámara del celular a uno de estos elementos, por ejemplo, al enfocar la cámara el póster de una película se puede hacer que un personaje aparezca dentro del entorno virtual, y desaparezca cuando la cámara deje de enfocar a la imagen.
+	
+	\item \textbf{Compartir}.- \textbf{Cloud Anchors API}) permite crear experiencias de realidad aumentada colaborativas con otras personas. Con ésta API, un dispositivo puede enviar un ancla y puntos característicos a a la nube. Éstas anclas pueden ser compartidas con otros usuarios ya sea de Android o iOS. Esto habilita a las apps para renderizar los mismos objetos 3D asociados a tales anclas, permitiendo a los usuarios tener la misma experiencia de realidad aumentada de forma simultánea
+	
 \end{itemize}
 
 \noindent
-Dado que ARCore es una tecnología nueva (su primer publicación oficial fue en Febrero de 2018)
+Dado que ARCore es una tecnología nueva (su primer publicación oficial fue en febrero de 2018 y su primer versión estable fue en agosto de 2018) la lista de dispositivos compatibles con ella no es tan amplia. En la \textit{Tabla 2} podemos observar una lista con los dispositivos que actualmente soportan ARCore.
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[]
+	\begin{tabular}{|c|l|}
+		\hline
+		\textbf{Marca}              & \multicolumn{1}{c|}{\textbf{Modelo}}               \\ \hline
+		\multirow{2}{*}{ASUS}       & Zenfone AR                                         \\ \cline{2-2} 
+		& Zenfone ARES                                       \\ \hline
+		\multirow{4}{*}{Google}     & Nexus 5X                                           \\ \cline{2-2} 
+		& Nexus 6P                                           \\ \cline{2-2} 
+		& Pixel, Pixel XL                                    \\ \cline{2-2} 
+		& PIxel 2, Pixel 2 XL                                \\ \hline
+		\multirow{5}{*}{HDM Global} & Nokia 6                                            \\ \cline{2-2} 
+		& Nokia 6.1 Plus                                     \\ \cline{2-2} 
+		& Nokia 7 Plus                                       \\ \cline{2-2} 
+		& Nokia 8                                            \\ \cline{2-2} 
+		& Nokia 8 Sirocco                                    \\ \hline
+		\multirow{4}{*}{Huawei}     & Honor 10                                           \\ \cline{2-2} 
+		& nova 3, nova 3i                                    \\ \cline{2-2} 
+		& P20, P20 Pro                                       \\ \cline{2-2} 
+		& Porsche Design Mate RS                             \\ \hline
+		\multirow{4}{*}{LG}         & G6                                                 \\ \cline{2-2} 
+		& G7 ThiQ                                            \\ \cline{2-2} 
+		& V30, V30+, V30+ JOJO                               \\ \cline{2-2} 
+		& V35 ThinQ                                          \\ \hline
+		\multirow{7}{*}{Motorola}   & Moto GS5 Plus                                      \\ \cline{2-2} 
+		& Moto G6                                            \\ \cline{2-2} 
+		& Moto G6 Plus                                       \\ \cline{2-2} 
+		& Moto X4                                            \\ \cline{2-2} 
+		& Moto Z2 Force                                      \\ \cline{2-2} 
+		& Moto Z3                                            \\ \cline{2-2} 
+		& Moto Z3 Play                                       \\ \hline
+		\multirow{4}{*}{OnePlus}    & OnePlus 3T                                         \\ \cline{2-2} 
+		& OnePlus 5                                          \\ \cline{2-2} 
+		& OnePlus 5T                                         \\ \cline{2-2} 
+		& OnePlus 6                                          \\ \hline
+		\multirow{10}{*}{Samsung}   & Galaxy A5                                          \\ \cline{2-2} 
+		& Galaxy A6                                          \\ \cline{2-2} 
+		& Galaxy A7                                          \\ \cline{2-2} 
+		& Galaxy A8, Galaxy A8+                              \\ \cline{2-2} 
+		& Galaxy Note8                                       \\ \cline{2-2} 
+		& Galaxy Note9                                       \\ \cline{2-2} 
+		& Galaxy S7, Galaxy S7 edge                          \\ \cline{2-2} 
+		& Galaxy S8, Galaxy S8+                              \\ \cline{2-2} 
+		& Galaxy S9, Galaxy S9+                              \\ \cline{2-2} 
+		& Galaxy Tab S4                                      \\ \hline
+		\multirow{3}{*}{Sony}       & Xperia XZ Premium                                  \\ \cline{2-2} 
+		& Xperia XZ1, Xperia XZ1 Compact                     \\ \cline{2-2} 
+		& Xperia XZ2, Xperia XZ2 Compact, Xperia XZ2 Premium \\ \hline
+	\end{tabular}
+
+\captionsetup{justification=centering}
+\caption*{Tabla 2. Listado de dispositivos compatibles con ARCore}
+\end{table}
 
 
 ----------------------------------------------
