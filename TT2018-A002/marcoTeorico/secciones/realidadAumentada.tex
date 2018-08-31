@@ -45,9 +45,8 @@ Wikitude es una plataforma de desarrollo de aplicaciones móviles, teniendo como
 	\item \textbf{Aumentado en 3D}.- Esta tecnología cargar y renderiza modelos en 3D sobre la escena proporcionada por la camara del dispositívo, importando los objetos virtuales desde herramientas de renderizado como \textbf{Autodesk, Maya o Blender 3D}, Wikitude trabaja conjuntamente con Unity3D para integrar animaciones por computadora.\cite{B16}
 	
 \end{itemize}
-
 \noindent
-Wikitude nos ofrece muchas vertientes para el desarrollo de realidad aumentada (AR), actualmente la convierte en una de las mejores tecnologías posicionadas en el mercado. Esta plataforma se puede instalar desde su pagina oficial, existe una versión de prueba y se puede adquirir la licencia desde 2490 euros.\cite{B16} Algunos de los dispositivos compatibles con Wikitude se muestran en la siguiente tabla.
+Wikitude nos ofrece muchas vertientes para el desarrollo de realidad aumentada (AR), actualmente la convierte en una de las mejores tecnologías posicionadas en el mercado. Esta plataforma se puede instalar desde su pagina oficial, existe una versión de prueba y se puede adquirir la licencia desde 2490 euros.\cite{B16} Algunos de los dispositivos compatibles con Wikitude se muestran en la \textit{Tabla 1}.
 
 \begin{table}[]
 	\begin{tabular}{|c|l|}
@@ -79,8 +78,36 @@ Wikitude nos ofrece muchas vertientes para el desarrollo de realidad aumentada (
 \subsubsection{ARKit}
 \noindent
 \subsubsection{Vuforia}
+Vuforia es una API que integra un motor Unity3D para su desarrollo con realidad aumentada (AR), sus aplicaciones estan escritas en C sharp sin embargo es multiplataforma.\par
+Vuforia se apoya de un patron o marca com un objetivo detectable por la aplicación. Vuforia trabaja con la posición y orientación, como marco de referencia utiliza un sistema de coordenadas 2D. Algunas de las funciones mas importantes para entender el alcance de esta libreria. \cite{B12} 
+
+	
+	\begin{itemize}
+	
+	\item \textbf{Objetivos}.- Un Target es un patrón de características naturales predefinidas por el desarrollador o usuario. El buscador de  Vuforia asocia una determinada a una imagen u objeto,a  su vez el software necesita saber qué patrones buscar. Para este propósito, los desarrolladores pueden usar el administrador de objetivos de Vuforia, de igual forma ofrece a los desarrolladores un servicio web para crear objetivos a partir de imágenes 2D, cuboides, cilindros y objetos tridimensionales.
+	
+	\item \textbf{Rastreo Extendido}.- El rastreo es una función que permite a Vuforia encontrar objetivos utilizando las características especificas y se  puede construir un mapa de características que rodean al objetivo a escanear y mantener la detección aunque no esté dentro de la vista de la cámara, 
+	
+	\item \textbf{Reconocimiento de imágenes}.- Viforia contiene un administrador de objetivos, se puede definir un objetivo de imagen utilizando cualquier patrón, la composición y la cantidad de características son los factores decisivos en la facilidad con que Vuforia puede detectar un objetivo de imagen.
+	
+	\item \textbf{Reconocimiento de Objetos}.- Si bien el reconocimiento de objetos de Vuforia utiliza el seguimiento de funciones naturales en su núcleo, el proceso de creación de objetos objetivos es bastante diferente en comparación con la creación de objetos de imágenes virtuales. Una imagen contiene características en 2D mediante el análisis de los píxeles del archivo de imagen proporcionado al administrador de destino. Sin embargo, un objeto 3D tiene un tercer eje a considerar. Los objetivos de objeto permiten a los usuarios ver objetos aumentados desde varios ángulos mientras el objeto mantiene su aumento. Antes de aumentar objetos 3D, Vuforia ha desarrollado una aplicación de escaneo que es capaz de obtener los objetos relativamente pequeños usando un cierto "plano de escaneo" sobre el cual se coloca el objeto a escanear, el objeto a ser escaneado sobre el objetivo de la imagen, el escáner de Vuforia puede determinar la coordenada XYZ, representada por un punto verde.
+		
+\end{itemize}
 \noindent
 \subsubsection{ARToolKit}
+ARToolKit es una \textbf{API Application Programming Interface} dedicada a la superposición de imágenes generadas por computadora dentro de escenas del mundo real. ARToolKit funciona en tiempo real y con bastante precisión desde la perspectica del usuario, sus algoritmos de virtualización permiten que calcule el punto de vista del usuario, para que las imágenes virtuales puedan ser integradas al mundo real.\cite{B07}\par
+Los métodos que utiliza ARToolKit para visualizar la realidad aumentada (AR) están limitados, esta API necesita escanear una targeta con una marca.\cite{B07}\par
+ARToolKit es un ToolKit proporciona funciones predefinidas que debe llamar en un orden específico para desarrollar un software con realidad aumentada (AR),también se puede usar ToolKit por separado. ARToolKit es compatible con múltiples plataformas.  ARToolKit utiliza algunas extensiones para su correcto funcionamiento que acontinuación se mencionan.
+
+\begin{itemize}
+	\item \textbf{OpenGL}.- OpenGL es la API de gráficos 2D y 3D más  utilizada por los diseñadores, es una tecnología que esta muy bien documentada la información sobre la implementación de OpenGL en hardware y software.\cite{B14}
+	
+	\item \textbf{GLUT}.- API con diferentes funciones OpenGL para crear mapas de textura MIP \textbf{mipmap} a partir de una imagen. GLUT 1.2 es la versión actual que integra a OpenGL 1.1.\cite{B19}
+	
+\end{itemize}
+\noindent
+ARToolKit actualmente se encuentra disponibles para plataformas windowns 98, 2000 y XP en adelante, MacOS X y Linux, IRIX (SGI).\cite{B19}
+
 \noindent
 
 \subsubsection{ARCore}
