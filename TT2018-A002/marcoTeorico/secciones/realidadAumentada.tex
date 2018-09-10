@@ -47,35 +47,59 @@ Wikitude es una plataforma de desarrollo de aplicaciones móviles, teniendo como
 \end{itemize}
 \noindent
 Wikitude nos ofrece muchas vertientes para el desarrollo de realidad aumentada (AR), actualmente la convierte en una de las mejores tecnologías posicionadas en el mercado. Esta plataforma se puede instalar desde su pagina oficial, existe una versión de prueba y se puede adquirir la licencia desde 2490 euros.\cite{B16} Algunos de los dispositivos compatibles con Wikitude se muestran en la \textit{Tabla 1}.
-
+\newpage
 \begin{table}[]
 	\begin{tabular}{|c|l|}
 		\hline
 		\textbf{Marca}              & \multicolumn{1}{c|}{\textbf{Modelo}}               \\ \hline
-		\multirow{5}{*}{Google}     & Nexus 4+                                            \\ \cline{2-2} 																	  
+		\multirow{5}{*}{Google}     & Nexus 4+                                \\ \cline{2-2} 														  
 		& Nexus 5+                                           	\\ \cline{2-2} 
 		& Nexus 6P                                           	\\ \cline{2-2} 
 		& Nexus 10+                                          	\\ \cline{2-2} 
     	& Google Glass                                       	\\ \hline
-		\multirow{1}{*}{Epson} & Epson Moverio BT-200        	\\ \cline{2-2} 
-		\cline{2-2}
-		\multirow{3}{*}{Apple}     & iPhone 4+               	\\ \cline{2-2} 
-		\cline{2-2} 																     
+		\multirow{1}{*}{Epson} & Epson Moverio BT-200           \\ \cline{2-2} 
+		\hline
+		\multirow{3}{*}{Apple}     & iPhone 4+                                \\  \cline{2-2}     														
 	    & Pad2X			                                    	\\ \cline{2-2} 
 		& iPod Touch 5th gen                                 	\\ \hline
 		\multirow{1}{*}{Vuzix}         & Vuzix M100          	\\ \cline{2-2}
-		\cline{2-2} 																      
+		\hline																      
 		\multirow{5}{*}{Samsung} 	   & Galaxy S2+           	\\ \cline{2-2} 
 		& Galaxy S7, Galaxy S7 edge                          	\\ \cline{2-2} 
 		& Galaxy S8, Galaxy S8+                              	\\ \cline{2-2} 
 		& Galaxy S9, Galaxy S9+                              	\\ \cline{2-2} 
 		& Galaxy Tab S4                                      	\\ \hline
+		\multirow{3}{*}{Sony}       & Xperia XZ Premium                                  \\ \cline{2-2} 
+		& Xperia XZ1, Xperia XZ1 Compact                     \\ \cline{2-2} 
+		& Xperia XZ2, Xperia XZ2 Compact, Xperia XZ2 Premium \\ \hline
 	\end{tabular}
 	\captionsetup{justification=centering}
 	\caption*{Tabla 1. Listado de dispositivos compatibles con Wikitude}
 \end{table}
 
 \subsubsection{ARKit}
+ARKit es la plataforma nativa de los sistemas \textbf{iOS} para el desarrollo de realidad aumentada (AR). Esta API nos proporciona una experiencia única en los objetos 3D incluyendo reflejos de entorno del mundo real, objetos virtuales brillantes, incluso la capacidad de interactuar con varios usuarios en tiempo real. Actualmente ARKit se encuentra en su versión 2 y con soporte exclusivo para los sistemas iOS 12 y posteriores.\cite{B20}
+\begin{itemize}
+	\item \textbf{Experiencias de AR persistentes}.-
+	ARKit proporcionar experiencias de AR que persistan entre sesiones o que se reanuden más adelante, por ejemplo los usuarios pueden iniciar un rompecabezas AR en una mesa y volver a él en el mismo estado que se dejo.\cite{B20}
+	\item \textbf{Experiencias de AR compartidas}.-Las aplicaciones de AR ya no están limitadas a una sola persona o dispositivo, actualmete \textbf{ARKit 2} proporciona experiencias multiusuario como juegos donde las experiencias de realidad aumentada se extienden hasta poder ser participe como un espectador.\cite{B20}
+	\item \textbf{Detección y Seguimiento de Objetos}.- Desde su version 1.5  ARKit agregó soporte para la detección de imágenes 2D, lo que le permite desencadenar una experiencia de realidad aumentada basada en imágenes 2D y aplicarlas en  carteles, obras de art, etx. ARKit 2 proporciona un seguimiento dinámico total de imágenes en 2D, de modo que objetos virtuales móviles se podrán observar en nuestro mundo real. ARKit 2 también agrega la capacidad de detectar objetos 3D dentro de un catalogo, como esculturas, juguetes o muebles.\cite{B20}
+	\item \textbf{Detección y Seguimiento de Objetos}.- Desde su version 1.5  ARKit agregó soporte para la detección de imágenes 2D, lo que le permite desencadenar una experiencia de realidad aumentada basada en imágenes 2D y aplicarlas en  carteles, obras de art, etx. ARKit 2 proporciona un seguimiento dinámico total de imágenes en 2D, de modo que objetos virtuales móviles se podrán observar en nuestro mundo real. ARKit 2 también agrega la capacidad de detectar objetos 3D dentro de un catalogo, como esculturas, juguetes o muebles.\cite{B20}
+	\item \textbf{Quick Look en objetos 3D y AR}.- Las experiencias de objetos 3D y realidad aumentada (AR)  de forma nativa en lo sistemas iOS ofrece una optimizacion de almacenamiento.Puede conpartir estas experiencias en mensajes, correos, noticias, etc. Con la tecnologia Quick Look los usuarios ven representaciones detalladas e increíbles, incluyendo reflejos del entorno del mundo real en objetos virtuales.\cite{B20}
+\end{itemize}
+\clearpage
+\begin{table}[]
+	\begin{tabular}{|c|l|}
+		\hline
+		\textbf{Marca}              & \multicolumn{1}{c|}{\textbf{Modelo}}               \\ \hline
+		\multirow{3}{*}{Apple}       & iPhone 6s, 6s Plus.      \\ \cline{2-2} 
+		& iPhone SE								                \\ \cline{2-2} 
+		& iPhone 7,  7 Plus.     				                \\ \cline{2-2} 
+		& iPad Pro 12.9" iPad Pro 10.5" y iPad Pro 9,7"             \\ \hline
+	\end{tabular}
+	\captionsetup{justification=centering}
+	\caption*{Tabla 2. Listado de dispositivos compatibles con ARKit 2}
+\end{table}
 \noindent
 \subsubsection{Vuforia}
 Vuforia es una API que integra un motor Unity3D para su desarrollo con realidad aumentada (AR), sus aplicaciones estan escritas en C sharp sin embargo es multiplataforma.\par
@@ -188,7 +212,7 @@ Dado que ARCore es una tecnología nueva (su primer publicación oficial fue en 
 	\end{tabular}
 
 \captionsetup{justification=centering}
-\caption*{Tabla 2. Listado de dispositivos compatibles con ARCore}
+\caption*{Tabla 3. Listado de dispositivos compatibles con ARCore}
 \end{table}
 
 
