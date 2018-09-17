@@ -1,3 +1,4 @@
+\newpage
 \section{Realidad Aumentada}
 \setcounter{secnumdepth}{2}
 
@@ -25,6 +26,7 @@ El impacto y la popularidad de la realidad aumentada han sido tan grandes, que a
 	\item ARToolKit
 	\item ARCore
 \end{itemize}
+\newpage
 
 \subsubsection{Wikitude}
 Wikitude es una plataforma de desarrollo de aplicaciones móviles, teniendo como principales dispositivos los smartphones, tabletas y gafas inteligentes. Esta plataforma les otorga a los desarrolladores una combinación única de un mundo físico y virtual. Wikitude se apoya de potentes funciones en combinación con la realidad aumentada (AR), actualmente disponibles para los sistemas Android, iOS, Google Glass, Epson Moverio, Vuzix M-100, Optinvent ORA1, PhoneGap, Titanium y Xamarin. Algunas de estas funciones son:\cite{B09}
@@ -47,7 +49,9 @@ Wikitude es una plataforma de desarrollo de aplicaciones móviles, teniendo como
 	
 \end{itemize}
 \noindent
-Wikitude nos ofrece muchas vertientes para el desarrollo de realidad aumentada (AR), actualmente la convierte en una de las mejores tecnologías posicionadas en el mercado. Esta plataforma se puede instalar desde su pagina oficial, existe una versión de prueba y se puede adquirir la licencia desde 2490 euros.\cite{B16} Algunos de los dispositivos compatibles con Wikitude se muestran en la \textit{Tabla 1}.
+Wikitude nos ofrece muchas vertientes para el desarrollo de realidad aumentada (AR), actualmente la convierte en una de las mejores tecnologías posicionadas en el mercado. Esta plataforma se puede instalar desde su pagina oficial, existe una versión de prueba y se puede adquirir la licencia desde 2490 euros.\cite{B16} 
+
+Algunos de los dispositivos compatibles con Wikitude se muestran en la siguiente tabla.
 \newpage
 \begin{table}[]
 	\begin{tabular}{| p{4.5cm} | p{10.5cm} |}
@@ -128,15 +132,164 @@ Vuforia se apoya de un patron o marca como un objetivo detectable por la aplicac
 	\item \textbf{Reconocimiento de imágenes}.- Vuforia contiene un administrador de objetivos, se puede definir un objetivo de imagen utilizando cualquier patrón, la composición y la cantidad de características son los factores decisivos en la facilidad con que Vuforia puede detectar un objetivo de imagen.
 	
 	\item \textbf{Reconocimiento de Objetos}.- Si bien el reconocimiento de objetos de Vuforia utiliza el seguimiento de funciones naturales en su núcleo, el proceso de creación de objetos objetivos es bastante diferente en comparación con la creación de objetos de imágenes virtuales. Una imagen contiene características en 2D mediante el análisis de los pixeles del archivo de imagen proporcionado al administrador de destino. Sin embargo, un objeto 3D tiene un tercer eje a considerar. Los objetivos de objeto permiten a los usuarios ver objetos aumentados desde varios ángulos mientras el objeto mantiene su aumento. Antes de aumentar objetos 3D, Vuforia ha desarrollado una aplicación de escaneo que es capaz de obtener los objetos relativamente pequeños usando un cierto "plano de escaneo" sobre el cual se coloca el objeto a escanear, el objeto a ser escaneado sobre el objetivo de la imagen, el escáner de Vuforia puede determinar la coordenada XYZ, representada por un punto verde.
+	
+	Algunos de los dispositivos compatibles con Vuforia se muestran acontinuación.
+	\begin{table}[]
+		\begin{tabular}{| p{4.5cm} | p{10.5cm} |}
+			\hline \centering
+			\textbf{Marca}              & \multicolumn{1}{c|}{\textbf{Modelo}}               \\ \hline \centering
+			\multirow{5}{*}{Samsumg}     & Samsung Galaxy J5 Pro                       \\ \cline{2-2} 														  
+			& Samsung Galaxy S6   \\ \cline{2-2}
+			& Samsung Galaxy S6 Edge   \\ \cline{2-2}
+			& Samsung Galaxy S6 Edge+   \\ \cline{2-2}
+			& Samsung Galaxy A7   \\ \cline{2-2}
+			& Samsung Galaxy J7 Pro   \\ \cline{2-2}
+			& Samsung Galaxy S7   \\ \cline{2-2}
+			& Samsung Galaxy S7 Edge - Exynos   \\ \cline{2-2}
+			& Samsung Galaxy S7 Edge - Snapdragon   \\ \cline{2-2}
+			& Samsung Galaxy A8+   \\ \cline{2-2}
+			& Samsung Galaxy S8   \\ \cline{2-2}
+			& Samsung Galaxy S8+   \\ \cline{2-2}
+			& Samsung Galaxy S9   \\ \cline{2-2}
+			& Samsung Galaxy S9+   \\ \cline{2-2}
+			& Samsung Galaxy Note 5 – Exynos   \\ \cline{2-2}
+			& Samsung Galaxy Note 8   \\ \cline{2-2}
+			& Samsung Galaxy Note 9    \\ \cline{2-2}
+			& Galaxy Tab S3 9.7                                        	\\ \hline \centering
+			\multirow{1}{*}{Asus}         & Asus ZenFone AR         	\\ \cline{2-2}
+			\hline \centering
+			\multirow{3}{*}{Xiaomi} & Xiaomi Redmi 3S    \\ \cline{2-2}
+			& Xiaomi Redmi Note 3  \\ \cline{2-2}
+			& Xiaomi Redmi Note 3 Snapdragon  \\ \hline \centering
+			\multirow{7}{*}{Huawei} & Huawei Mate 10   \\ \cline{2-2}
+			& Huawei Mate 10 Pro   \\ \cline{2-2}
+			& Huawei P10   \\ \cline{2-2}
+			& Huawei P10 Lite   \\ \cline{2-2}
+			& Huawei P20 Lite   \\ \cline{2-2}
+			& Huawei P20   \\ \cline{2-2}
+			& Huawei P20 Pro  \\ \hline   \centering
+			\multirow{1}{*}{Motorola}     &  Motorola Moto G4  \\ \cline{2-2}
+			\hline \centering
+			\multirow{4}{*}{LG}  & LG V30      \\ \cline{2-2}
+			& LG G6   \\ \cline{2-2}
+			& LG G7  \\ \cline{2-2}
+			& LG G8                        \\ \hline   \centering
+			\multirow{2}{*}{OPPO}   & OPPO R11      \\ \cline{2-2}
+			& OPPO R11t         \\   \hline \centering
+			\multirow{5}{*}{Google}    & Google Pixel              \\ \cline{2-2}
+			& Google Pixel XL   \\ \cline{2-2}
+			& Google Pixel 2   \\ \cline{2-2}
+			& Google Pixel 2 XL   \\ \cline{2-2}
+			& Google Nexus 6P                        \\ \hline   \centering
+			\multirow{2}{*}{Sony}   & Xperia Z5      \\ \cline{2-2}
+			& Xperia XZ         \\   \hline \centering
+			\multirow{23}{*}{Apple}     & iPad Air 2     \\ \cline{2-2}
+			& iPad Mini   \\ \cline{2-2}
+			& iPad Mini 2   \\ \cline{2-2}
+			& iPad Mini 3   \\ \cline{2-2}
+			& iPad Mini 4   \\ \cline{2-2}
+			& iPhone 5   \\ \cline{2-2}
+			& iPhone 5c   \\ \cline{2-2}
+			& iPhone 5s   \\ \cline{2-2}
+			& iPhone SE   \\ \cline{2-2}
+			& iPhone 6   \\ \cline{2-2}
+			& iPhone 6 Plus   \\ \cline{2-2}
+			& iPhone 6S   \\ \cline{2-2}
+			& iPhone 6S Plus   \\ \cline{2-2}
+			& iPhone 7   \\ \cline{2-2}
+			& iPhone 7 Plus   \\ \cline{2-2}
+			& iPhone 8    \\ \cline{2-2}
+			& iPhone 8 Plus   \\ \cline{2-2}
+			& iPhone X   \\ \cline{2-2}
+			& iPad Pro 12.9   \\ \cline{2-2}
+			& iPad Pro 12.9 (2nd Gen)   \\ \cline{2-2}
+			& iPad Pro 10.5   \\ \cline{2-2}
+			& iPad Pro 9.7   \\ \cline{2-2}
+			& iPad (3rd Gen)   \\ \cline{2-2}
+			& iPad (4th Gen)   \\ \cline{2-2}
+			& iPad (5th Gen)  \\  \cline{2-2}
+			& iPad Air   \\ \cline{2-2}
+			& iPod Touch (5th Gen)   \\ \cline{2-2}
+			& iPod Touch (6th Gen)   \\ \hline 
+		\end{tabular}
+		\captionsetup{justification=centering}
+		\caption{Listado de dispositivos compatibles con Vuforia}
+	\end{table}
 		
 \end{itemize}
-
+\newpage
 \noindent
 \subsubsection{ARToolKit}
 ARToolKit es una \textbf{API Application Programming Interface} dedicada a la superposición de imágenes generadas por computadora dentro de escenas del mundo real. ARToolKit funciona en tiempo real y con bastante precisión desde la perspectiva del usuario, sus algoritmos de virtualización permiten que calcule el punto de vista del usuario, para que las imágenes virtuales puedan ser integradas al mundo real.\cite{B07}\par
-Los métodos que utiliza ARToolKit para visualizar la realidad aumentada (AR) están limitados, esta API necesita escanear una tarjeta con una marca.\cite{B07}\par
-ARToolKit es un ToolKit proporciona funciones predefinidas que debe llamar en un orden específico para desarrollar un software con realidad aumentada (AR),también se puede usar ToolKit por separado. ARToolKit es compatible con múltiples plataformas. ARToolKit utiliza algunas extensiones para su correcto funcionamiento que a continuación se mencionan.
+Los métodos que utiliza ARToolKit para visualizar la realidad aumentada (AR) están limitados, esta API necesita escanear una tarjeta marcada especialmente para que calcule matematicamente el ángulo y perspectiva del objeto virtual.\cite{B07}\par
 
+ARToolkit utiliza métodos de análisis por computadora que a través de esta secuencia de pasos y ayudado de cálculos matemáticos genera la realidad aumentada en su mundo virtual \par
+\begin{enumerate}[1.]
+	\item  La cámara captura el vídeo del entorno.
+	\item ARToolKit busca la forma cuadrada de una tarjeta marcada con el objeto AR.
+	\item Si se encuentra una etiqueta marcada, los algoritmos de visión artificial calculan la posición de la cámara en relación con la marca.
+	\item La región dentro del cuadrado se transforma utilizando una marca unica que luego se compara en una
+	base de datos,que por conicidencia exacta el marcador se identifica.
+	\item Una vez que se tiene una coincidencia, la posición de la cámara y la tarjeta con la marca,genera un modelo de gráficos de computadora que extrae de sus registros y sobrepone por encima del video jsto en el punto de esta marca.
+\end{enumerate}
+
+\textbf{La identificación}
+El proceso comienza con la imagen de entrada que se transfiere a una imagen binaria, el siguiente paso es encontrar los contornos de la imagen, cuando se encuentran los contornos,son extraídos los cuatro vértices que conectan las líneas y posteriormente se se guardan. De esta información de la etiqueta se adquiere una homagrafía y sus patrones se comparan con algunos almacenados en la base de datos, para este calculo se necesitan al menos cuatro pares de puntos. La imagen del marcador se transforma en el espacio de la pantalla de la cámara y en comparación con los patrones en el
+base de datos hasta encontrar la coincidencia de exacta.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=9cm]{imagenes/marcoteorico/plataformas/squareMarkersARtookik.png}
+	\caption{Pasos para la identificación de la marca.\cite{B13}}
+	\label{fig:analogo}
+\end{figure}
+\newpage
+
+\textbf{Posicionamiento de la cámara} Para poder representar objetos 3D y posicionados en la parte superior del marcador, la camara tiene como referencia las coordenadas en tercera dimensión y utiliza operadores matriciales para poder interactuar con la perspectiva y la marca donde se renderizara en objeto deseado. Descripción gráfica de los sistemas de coordenadas para la cámara.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=7cm]{imagenes/marcoteorico/plataformas/positionMarkerARToolKit.png}
+	\caption{Sistema de coordenadas de la camara y la marca.\cite{B13}}
+	\label{fig:analogo}
+\end{figure}
+
+Cuando nos movemos de posición, la cámara se apoya de un sistema de coordenadas  en tercera dimensión en relacion a la posicion absoluta del marcador. La cámara está posicionada en el origen del sistema de coordenadas, mirando a lo largo del eje Z. Dos ejes del sistema de coordenadas del marcador son paralelos a los lados del marcador cuadrado. Los sistemas de coordenadas de cámara y el marcador difieren entre ellos con una rotación y una traslación. Esta relación se puede describir con matrices de la siguiente manera:
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=12cm]{imagenes/marcoteorico/plataformas/eq01ArToolKit.png}
+	\caption{Sistemas matriciales para la camara y la marca.\cite{B13}}
+	\label{fig:analogo}
+\end{figure}
+\newpage
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=10cm]{imagenes/marcoteorico/plataformas/eq02ArToolKit.png}
+	\caption{La relación entre las coordenadas de la proyección de la cámara y las coordenadas de la posición de la cámara.\cite{B13}}
+	\label{fig:analogo}
+\end{figure}
+Los cálculos que utiliza ARToolKit para las líneas de la marca en pantalla se conocen como parámetros intrínsecos de la cámara desde el contorno del marcador se puede describir de la siguiente manera:
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=5cm]{imagenes/marcoteorico/plataformas/eq03ArToolKit.png}
+	\caption{Ecuaciones de las lineas generadas entre el marcador y la camara.\cite{B13}}
+	\label{fig:analogo}
+\end{figure}
+Todos los puntos 3D que se proyectarán a estas dos líneas que se observan en la siguiente imagen.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=10cm]{imagenes/marcoteorico/plataformas/eq04ArToolKit.png}
+	\caption{Puntos generados que se proyectan en las lineas paralelas de la ecuación 3.\cite{B13}}
+	\label{fig:analogo}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=10cm]{imagenes/marcoteorico/plataformas/positionCameraARToolKit.png}
+	\caption{Descripción gráfica de los cálculos generados entre camara y la marca.\cite{B13}}
+	\label{fig:analogo}
+\end{figure}
+Todos estos puntos en 3D seran proyectados 
+\newpage
+ARToolKit utiliza algunas extensiones para su correcto funcionamiento que a continuación se mencionan.
 \begin{itemize}
 	\item \textbf{OpenGL}.- OpenGL es la API de gráficos 2D y 3D más  utilizada por los diseñadores, es una tecnología que esta muy bien documentada la información sobre la implementación de OpenGL en hardware y software.\cite{B14}
 	
@@ -145,7 +298,7 @@ ARToolKit es un ToolKit proporciona funciones predefinidas que debe llamar en un
 \end{itemize}
 \noindent
 ARToolKit actualmente se encuentra disponibles para plataformas Windows 98, 2000 y XP en adelante, MacOS X y Linux, IRIX (SGI).\cite{B19}
-
+\newpage
 \noindent
 
 \subsubsection{ARCore}
