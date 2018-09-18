@@ -227,27 +227,27 @@ ARToolkit utiliza métodos de análisis por computadora que a través de esta se
 \begin{enumerate}[1.]
 	\item  La cámara captura el vídeo del entorno.
 	\item ARToolKit busca la forma cuadrada de una tarjeta marcada con el objeto AR.
-	\item Si se encuentra una etiqueta marcada, los algoritmos de visión artificial calculan la posición de la cámara en relación con la marca.
+	\item Si se encuentra una etiqueta marcada, los algoritmos de visión artificial calculan la posición de la cámara basada en la posición de la marca.
 	\item La región dentro del cuadrado se transforma utilizando una marca unica que luego se compara en una
-	base de datos,que por conicidencia exacta el marcador se identifica.
-	\item Una vez que se tiene una coincidencia, la posición de la cámara y la tarjeta con la marca,genera un modelo de gráficos de computadora que extrae de sus registros y sobrepone por encima del video jsto en el punto de esta marca.
+	base de datos, que por coincidencia exacta el marcador se identifica.
+	\item Una vez que se tiene una coincidencia, la posición de la cámara y la tarjeta con la marca,genera un modelo de gráficos de computadora que extrae de sus registros y sobrepone por encima del vídeo justo en el punto de esta marca.
 \end{enumerate}
 
 \textbf{La identificación}
-El proceso comienza con la imagen de entrada que se transfiere a una imagen binaria, el siguiente paso es encontrar los contornos de la imagen, cuando se encuentran los contornos,son extraídos los cuatro vértices que conectan las líneas y posteriormente se se guardan. De esta información de la etiqueta se adquiere una homagrafía y sus patrones se comparan con algunos almacenados en la base de datos, para este calculo se necesitan al menos cuatro pares de puntos. La imagen del marcador se transforma en el espacio de la pantalla de la cámara y en comparación con los patrones en el
+El proceso comienza con la imagen de entrada que se transfiere a una imagen binaria, el siguiente paso es encontrar los contornos de la imagen, cuando se encuentran los contornos,son extraídos los cuatro vértices que conectan las líneas y posteriormente se se guardan. De esta información de la etiqueta se adquiere una homografía y sus patrones se comparan con algunos almacenados en la base de datos, para este calculo se necesitan al menos cuatro pares de puntos. La imagen del marcador se transforma en el espacio de la pantalla de la cámara y en comparación con los patrones en el
 base de datos hasta encontrar la coincidencia de exacta.
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=9cm]{imagenes/marcoteorico/plataformas/squareMarkersARtookik.png}
+	\includegraphics[width=14cm,height=7cm]{imagenes/marcoteorico/plataformas/squareMarkersARtookik.png}
 	\caption{Pasos para la identificación de la marca.\cite{B13}}
 	\label{fig:analogo}
 \end{figure}
 \newpage
 
-\textbf{Posicionamiento de la cámara} Para poder representar objetos 3D y posicionados en la parte superior del marcador, la camara tiene como referencia las coordenadas en tercera dimensión y utiliza operadores matriciales para poder interactuar con la perspectiva y la marca donde se renderizara en objeto deseado. Descripción gráfica de los sistemas de coordenadas para la cámara.
+\textbf{Posicionamiento de la cámara} Para poder representar objetos 3D y posicionados en la parte superior del marcador, la cámara tiene como referencia las coordenadas en tercera dimensión y utiliza operadores matriciales para poder interactuar con la perspectiva y la marca donde se renderizara en objeto deseado. Descripción gráfica de los sistemas de coordenadas para la cámara.
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=7cm]{imagenes/marcoteorico/plataformas/positionMarkerARToolKit.png}
+	\includegraphics[width=10cm,height=7cm]{imagenes/marcoteorico/plataformas/positionMarkerARToolKit.png}
 	\caption{Sistema de coordenadas de la camara y la marca.\cite{B13}}
 	\label{fig:analogo}
 \end{figure}
@@ -256,7 +256,7 @@ Cuando nos movemos de posición, la cámara se apoya de un sistema de coordenada
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=12cm]{imagenes/marcoteorico/plataformas/eq01ArToolKit.png}
-	\caption{Sistemas matriciales para la camara y la marca.\cite{B13}}
+	\caption{Sistemas matriciales para la cámara y la marca.\cite{B13}}
 	\label{fig:analogo}
 \end{figure}
 \newpage
