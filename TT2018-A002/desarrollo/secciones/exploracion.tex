@@ -3,4 +3,26 @@
 \subsection{Alcance}
 \subsection{Establecimiento de proyectos}
 \subsection{Pruebas de contexto}
+Se realizaron pruebas de contexto definiendo las siguientes especificaciones:
+\begin{itemize}
+	\item Nombre del dispositivo en el que se realizó
+	\item Fecha de prueba
+	\item Versión de Sceneform SDK usada
+	\item Versión de ARCore SDK
+	\item Versión de Android
+\end{itemize}
+Por otro lado cada prueba se realizó tomando en cuenta las siguientes características:
+\begin{itemize}
+	\item \textbf{Posición Cardinal}.- Define si un objeto virtual puede visualizarse desde los cuatro puntos cardinales (norte, sur, este, oeste) y desde la parte superior del mismo, cuando la cámara gira alrededor del objeto mientras lo enfoca.
+	\item \textbf{Tamaño relativo}.- Define si un objeto cambia su tamaño en el entorno virtual dependiendo de la distancia a la que se acerque o se aleje la cámara. Cuando la cámara se acerca, el objeto deberá aumentar su tamaño, y viceversa, como si se tratase de un objeto real.
+	\item \textbf{Luminosidad}.- Define el grado de oscuridad de un objeto a determinada luz, es decir, cuando la luz en el ambiente real es alta, el objeto se verá iluminado, en caso contrario cuando haya escasa luz, el objeto se oscurecerá.
+	\item \textbf{Superficie}.- Describe en qué superficies el objeto virtual es puesto, si fue posible su superposición en este material y qué comportamiento tiene en cada una de estas.
+	\item \textbf{Memoria de objetos}.- Define si los objetos virtuales se conservan en la memoria cuando la cámara pierde su enfoque en ellos y los vuelve a enfocar. También describe si los objetos conservaron su posición tras el re-enfoque.
+	\item \textbf{Capacidad máxima de objetos}.- Define el número de objetos virtuales que pueden ser mostrados en escena sin que el rendimiento de la aplicación caiga considerablemente.
+	\item \textbf{Distancia}.- Define la distancia a la que se encuentra la cámara de un objeto virtual sin que éste desaparezca o sin que su resolución baje considerablemente.
+\end{itemize}
+\noindent
+
+\input{./desarrollo/secciones/pruebas/motog6}
+
 
