@@ -18,14 +18,14 @@ La realidad aumentada tiene como objetivo simplificar la vida del usuario al agr
 \subsection{Tecnología de realidad aumentada}
 El registro de imágenes de la realidad aumentada utiliza diferentes métodos de visión por computadora, principalmente relacionados con el seguimiento de vídeo Estos métodos generalmente consisten en dos etapas: reconocimiento y seguimiento/reconstrucción . Primero, se detectan marcadores, imágenes ópticas o puntos de interés en las imágenes de la cámara.\cite{B27} \par
 \vspace{5mm}
-El reconocimiento puede hacer uso de la detección de características, detección de bordes u otros métodos de procesamiento de imágenes con visión artificial, la mayoria de las tecnicas de seguimiento disponibles se pueden separar en dos clases:\cite{B27} \par
+El reconocimiento puede hacer uso de la detección de características, detección de bordes u otros métodos de procesamiento de imágenes con visión artificial, la mayoría de las técnicas de seguimiento disponibles se pueden separar en dos clases:\cite{B27} \par
 \vspace{5mm}
-Los metodos basados en caracteristicas consisten en descubir la conexion entre las caracteristicas de imagen en 2D y sus coordenadas del mundo en 3D. \cite{B27} \par
+Los métodos basados en características consisten en descubrir la conexión entre las características de imagen en 2D y sus coordenadas del mundo en 3D. \cite{B27} \par
 \vspace{5mm}
-Los metodos basados en modelos utilizan el modelo de las caracterisitcas de los objetos rastreados, como los modelos CAD o las plantillas 2D yel marco del mundo en 3D, es posible encontrar la posicion de la camara proyectando las coordenadas 3D de la entidad en las coordenadas de imagen 2D observadas y minimizando la distancia en sus caracteristicas correspondientes en 2D. Las restricciones para la estimacion de la postura de la camara se determinan con mayor frecuencia utilizando caracteristicas de puntos.\cite{B27}\par
+Estos métodos basados en modelos utilizan el modelo de las características de los objetos rastreados, como los modelos CAD o las plantillas 2D y el marco del mundo en 3D, es posible encontrar la posición de la cámara proyectando las coordenadas 3D de la entidad en las coordenadas de imagen 2D observadas y minimizando la distancia en sus características correspondientes en 2D. Las restricciones para la estimación de la postura de la cámara se determinan con mayor frecuencia utilizando características de puntos.\cite{B27}\par
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=11cm,height=7cm]{imagenes/marcoteorico/ar/tecnologyAR.png}
+	\includegraphics[width=11cm,height=8cm]{imagenes/marcoteorico/ar/tecnologyAR.png}
 	\caption{Restricciones de los puntos para el problema de la posición de la cámara respecto al objeto AR.\cite{B27}}
 	\label{fig:analogo}
 \end{figure}
@@ -38,22 +38,22 @@ Pero, lo que debería, o será el dispositivo de visualización. Tenemos varias 
 \vspace{5mm}
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=12cm,height=8cm]{imagenes/marcoteorico/ar/visionAR.png}
+	\includegraphics[width=17cm,height=10cm]{imagenes/marcoteorico/ar/visionAR.png}
 	\caption{Visión base de la realida aumentada\cite{B22}}
 	\label{fig:analogo}
 \end{figure}
-\subsection{Taxonomia de la realidad aumentada}
-La realidad aumentada es un campo sorprendentemente diverso, robusto y complicado, y si alguna vez había una industria donde una talla no se ajusta a todas, es el campo de la realidad aumentada.Los dispositivos no portátiles incluyen dispositivos móviles (teléfonos inteligentes, tabletas, notebooks, dispositivos, aparatos fijos (televisores, computadoras, reproducciones, etc.) y pantallas). El diagrama que se muestra a continuacion describe la taxonomía de la realidad aumentada.\cite{B22} \par
+\subsection{Taxonomía de la realidad aumentada}
+La realidad aumentada es un campo sorprendentemente diverso, robusto y complicado; los dispositivos no portátiles (aparatos fijos como televisores, computadoras, reproductores de musica, etc.) y dispositívos móviles (Smartphones, tablet's, notebook's) se muestran a continuación describiendo la taxonomía de la realidad aumentada.\cite{B22} \par
 \vspace{5mm}
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=17cm,height=10cm]{imagenes/marcoteorico/ar/taxonomiaAR.png}
-	\caption{Taxonomía de la realida aumentada\cite{B22}}
+	\caption{Taxonomía de la realidad aumentada\cite{B22}}
 	\label{fig:analogo}
 \end{figure}
-La experiencia puede ser experimentada en dispositivos de realidad aumentada dedicados o dedicados, o no dedicados dispositivos como televisores, teléfonos móviles, tabletas y PC. Dentro de los sistemas de realidad aumentada visuales dedicados, hay siete clases:\cite{B22} \par
+La experiencia de la realidad aumentada ser experimentada en dispositivos dedicados o no dedicados como TV's, smarthphones, tablet's y PC's. Dentro de los sistemas de realidad aumentada visuales dedicados, hay siete clases:\cite{B22} \par
 \vspace{5mm}
-Pantallas montadas en la cabeza (HMD) (a) Basada en LCD, para la cabeza (b) pantallas retinales virtuales 2. pantallas de mano (a) Pantallas LCD planas con una cámara adjunta 3. Pantallas de proyección. (a) Proyecte la información virtual directamente en los objetos físicos (b) Proyectores de cabeza o fijos en la habitación. Objetos con superficie especial reflectante. ing la luz (c) Imágenes proyectadas solo visibles a lo largo de la línea de proyección. Presumiblemente 3.c podría incluir HUDs. \cite{B22} \par
+Pantallas montadas en la cabeza (HMD) (a) Basada en LCD,(b) pantallas retinales virtuales 2. pantallas de mano (a) Pantallas LCD planas con una cámara adjunta 3. Pantallas de proyección. (a) Proyecte la información virtual directamente en los objetos físicos (b) Proyectores de cabeza o fijos en la habitación. Objetos con superficie especial reflectante. ing la luz (c) Imágenes proyectadas solo visibles a lo largo de la línea de proyección. Presumiblemente 3.c podría incluir HUDs. \cite{B22} \par
 \vspace{5mm}
 
 Mientras Steve Mann en su libro: Intelligent Image Processing (Wiley 2001) sugirió Gesticula lo siguiente: La realidad aumentada debe ser: (a) Ortoespacial (capaz de cartografiar rayos de luz virtual colinealmente con rayos de luz real); (b) ortotonal; (c) Ortotemporal (interactivo en tiempo real). Dice Mann: "Un mediador ideal de la realidad es tal que es capaz de producir un ilusión de transparencia sobre algunos o todos los campos visuales, y por lo tanto cumple todos los criterios anteriores ". Los siguientes son algunos ejemplos de los tipos de productos que componen el mercado de la realidad mentada.\cite{B22} \par
