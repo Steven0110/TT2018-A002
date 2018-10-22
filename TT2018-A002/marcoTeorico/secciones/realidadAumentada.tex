@@ -43,7 +43,8 @@ Pero, lo que debería, o será el dispositivo de visualización. Tenemos varias 
 	\label{fig:analogo}
 \end{figure}
 \subsection{Taxonomía de la realidad aumentada}
-La realidad aumentada es un campo sorprendentemente diverso, robusto y complicado; los dispositivos no portátiles (aparatos fijos como televisores, computadoras, reproductores de musica, etc.) y dispositívos móviles (Smartphones, tablet's, notebook's) se muestran a continuación describiendo la taxonomía de la realidad aumentada.\cite{B22} \par
+La realidad aumentada es un campo sorprendentemente diverso, robusto y complicado. En un nivel superior se encuentran dos categorias principales: Dispositívos protables y dispositívos estacionarios (Moviles y fijos).
+Los dispositívos moviles incluyen aquellos como aurículares, cascos y algún día lentes de contacto.Los dispositivos no portátiles (aparatos fijos como televisores, computadoras, reproductores de musica, etc.) y dispositívos móviles (Smartphones, tablet's, notebook's), y pantallas de visualización.El siguiente diagrama describe el campo de la realidad aumentada.\cite{B22} \par
 \vspace{5mm}
 \begin{figure}[h!]
 	\centering
@@ -51,10 +52,21 @@ La realidad aumentada es un campo sorprendentemente diverso, robusto y complicad
 	\caption{Taxonomía de la realidad aumentada\cite{B22}}
 	\label{fig:analogo}
 \end{figure}
-La experiencia de la realidad aumentada ser experimentada en dispositivos dedicados o no dedicados como TV's, smarthphones, tablet's y PC's. Dentro de los sistemas de realidad aumentada visuales dedicados, hay siete clases:\cite{B22} \par
+La experiencia de la realidad aumentada en dispositivos dedicados o no dedicados como TV's, smarthphones, tablet's y PC's. Dentro de los sistemas de realidad aumentada visuales dedicados, hay siete clases:\cite{B22} \par
 \vspace{5mm}
-Pantallas montadas en la cabeza (HMD) (a) Basada en LCD,(b) pantallas retinales virtuales 2. pantallas de mano (a) Pantallas LCD planas con una cámara adjunta 3. Pantallas de proyección. (a) Proyecte la información virtual directamente en los objetos físicos (b) Proyectores de cabeza o fijos en la habitación. Objetos con superficie especial reflectante. ing la luz (c) Imágenes proyectadas solo visibles a lo largo de la línea de proyección. Presumiblemente 3.c podría incluir HUDs. \cite{B22} \par
-\vspace{5mm}
+\begin{enumerate}[1.]
+	\item Lentes de contacto
+	\item Cascos.
+	\item Display Head-up (HUD)
+	\item Headset(Gáfas inteligentes)
+	\begin{enumerate}[a)]
+		\item Integrado (interno, externo)
+		\item Pantallas y sistemas adicionales para gafas convencionales como sol o de seguridad (interno, externo)
+	\end{enumerate}
+	\item Proyectores(No HUD)
+	\item Dedicados y otros (TV,Salud, alarmas,etc)
+
+\end{enumerate}
 
 Mientras Steve Mann en su libro: Intelligent Image Processing (Wiley 2001) sugirió Gesticula lo siguiente: La realidad aumentada debe ser: (a) Ortoespacial (capaz de cartografiar rayos de luz virtual colinealmente con rayos de luz real); (b) ortotonal; (c) Ortotemporal (interactivo en tiempo real). Dice Mann: "Un mediador ideal de la realidad es tal que es capaz de producir un ilusión de transparencia sobre algunos o todos los campos visuales, y por lo tanto cumple todos los criterios anteriores ". Los siguientes son algunos ejemplos de los tipos de productos que componen el mercado de la realidad mentada.\cite{B22} \par
 \subsection{Impacto de la realidad aumentada}
@@ -100,8 +112,7 @@ Wikitude es una plataforma de desarrollo de aplicaciones móviles, teniendo como
 Wikitude nos ofrece muchas vertientes para el desarrollo de realidad aumentada (AR), actualmente la convierte en una de las mejores tecnologías posicionadas en el mercado. Esta plataforma se puede instalar desde su pagina oficial, existe una versión de prueba y se puede adquirir la licencia desde 2490 euros.\cite{B16} 
 
 Algunos de los dispositivos compatibles con Wikitude se muestran en la siguiente tabla.
-\newpage
-\begin{table}[]
+\begin{table}[h]
 	\begin{tabular}{| p{4.5cm} | p{10.5cm} |}
 		\hline \centering
 		\textbf{Marca}              & \multicolumn{1}{c|}{\textbf{Modelo}}               \\ \hline \centering
@@ -139,8 +150,7 @@ Algunos de los dispositivos compatibles con Wikitude se muestran en la siguiente
 	\item \textbf{Detección y Seguimiento de Objetos}.- Desde su versión 1.5  ARKit agregó soporte para la detección de imágenes 2D, lo que le permite desencadenar una experiencia de realidad aumentada basada en imágenes 2D y aplicarlas en  carteles, obras de art, etc.ARKit 2 proporciona un seguimiento dinámico total de imágenes en 2D, de modo que objetos virtuales móviles se podrán observar en nuestro mundo real. ARKit también agrega la capacidad de detectar objetos 3D dentro de un catalogo, como esculturas, juguetes o muebles.\cite{B20}
 	\item \textbf{Quick Look en objetos 3D y AR}.- Las experiencias de objetos 3D y realidad aumentada (AR) de forma nativa para \textbf{iOS} ofrece una optimización de almacenamiento, usted puede compartir estas experiencias en mensajes, correos, noticias, etc. Con la tecnologia \textbf{Quick Look} los usuarios ven experiencias detalladas e increíbles, incluyendo reflejos del entorno del mundo real en objetos virtuales.\cite{B20}
 \end{itemize}
-\clearpage
-\begin{table}[]
+\begin{table}[h]
 	\begin{tabular}{| p{4.5cm} | p{10.5cm} |}
 		\hline \centering
 		\textbf{Marca}              & \multicolumn{1}{c|}{\textbf{Modelo}}               \\ \hline \centering
@@ -168,9 +178,6 @@ Algunos de los dispositivos compatibles con Wikitude se muestran en la siguiente
 \noindent
 \subsubsection{Vuforia}
 Vuforia es una API que integra un motor Unity3D para su desarrollo con realidad aumentada (AR), sus aplicaciones están escritas en C sin embargo es multiplataforma.\par
-Vuforia se apoya de un patron o marca como un objetivo detectable por la aplicación. Vuforia trabaja con la posición y orientación, como marco de referencia utiliza un sistema de coordenadas 2D. Algunas de las funciones mas importantes para entender el alcance de esta librería. \cite{B12} 
-
-	
 	\begin{itemize}
 	
 	\item \textbf{Objetivos}.- Un Target es un patrón de características naturales predefinidas por el desarrollador o usuario. El buscador de  Vuforia asocia una determinada a una imagen u objeto,a  su vez el software necesita saber qué patrones buscar. Para este propósito, los desarrolladores pueden usar el administrador de objetivos de Vuforia, de igual forma ofrece a los desarrolladores un servicio web para crear objetivos a partir de imágenes 2D, cuboides, cilindros y objetos tridimensionales.
@@ -179,92 +186,117 @@ Vuforia se apoya de un patron o marca como un objetivo detectable por la aplicac
 	
 	\item \textbf{Reconocimiento de imágenes}.- Vuforia contiene un administrador de objetivos, se puede definir un objetivo de imagen utilizando cualquier patrón, la composición y la cantidad de características son los factores decisivos en la facilidad con que Vuforia puede detectar un objetivo de imagen.
 	
-	\item \textbf{Reconocimiento de Objetos}.- Si bien el reconocimiento de objetos de Vuforia utiliza el seguimiento de funciones naturales en su núcleo, el proceso de creación de objetos objetivos es bastante diferente en comparación con la creación de objetos de imágenes virtuales. Una imagen contiene características en 2D mediante el análisis de los pixeles del archivo de imagen proporcionado al administrador de destino. Sin embargo, un objeto 3D tiene un tercer eje a considerar. Los objetivos de objeto permiten a los usuarios ver objetos aumentados desde varios ángulos mientras el objeto mantiene su aumento. Antes de aumentar objetos 3D, Vuforia ha desarrollado una aplicación de escaneo que es capaz de obtener los objetos relativamente pequeños usando un cierto "plano de escaneo" sobre el cual se coloca el objeto a escanear, el objeto a ser escaneado sobre el objetivo de la imagen, el escáner de Vuforia puede determinar la coordenada XYZ, representada por un punto verde.
-	
-	Algunos de los dispositivos compatibles con Vuforia se muestran acontinuación.
-	\begin{table}[]
-		\begin{tabular}{| p{4.5cm} | p{10.5cm} |}
-			\hline \centering
-			\textbf{Marca}              & \multicolumn{1}{c|}{\textbf{Modelo}}               \\ \hline \centering
-			\multirow{5}{*}{Samsumg}     & Samsung Galaxy J5 Pro                       \\ \cline{2-2} 														  
-			& Samsung Galaxy S6   \\ \cline{2-2}
-			& Samsung Galaxy S6 Edge   \\ \cline{2-2}
-			& Samsung Galaxy S6 Edge+   \\ \cline{2-2}
-			& Samsung Galaxy A7   \\ \cline{2-2}
-			& Samsung Galaxy J7 Pro   \\ \cline{2-2}
-			& Samsung Galaxy S7   \\ \cline{2-2}
-			& Samsung Galaxy S7 Edge - Exynos   \\ \cline{2-2}
-			& Samsung Galaxy S7 Edge - Snapdragon   \\ \cline{2-2}
-			& Samsung Galaxy A8+   \\ \cline{2-2}
-			& Samsung Galaxy S8   \\ \cline{2-2}
-			& Samsung Galaxy S8+   \\ \cline{2-2}
-			& Samsung Galaxy S9   \\ \cline{2-2}
-			& Samsung Galaxy S9+   \\ \cline{2-2}
-			& Samsung Galaxy Note 5 – Exynos   \\ \cline{2-2}
-			& Samsung Galaxy Note 8   \\ \cline{2-2}
-			& Samsung Galaxy Note 9    \\ \cline{2-2}
-			& Galaxy Tab S3 9.7                                        	\\ \hline \centering
-			\multirow{1}{*}{Asus}         & Asus ZenFone AR         	\\ \cline{2-2}
-			\hline \centering
-			\multirow{3}{*}{Xiaomi} & Xiaomi Redmi 3S    \\ \cline{2-2}
-			& Xiaomi Redmi Note 3  \\ \cline{2-2}
-			& Xiaomi Redmi Note 3 Snapdragon  \\ \hline \centering
-			\multirow{7}{*}{Huawei} & Huawei Mate 10   \\ \cline{2-2}
-			& Huawei Mate 10 Pro   \\ \cline{2-2}
-			& Huawei P10   \\ \cline{2-2}
-			& Huawei P10 Lite   \\ \cline{2-2}
-			& Huawei P20 Lite   \\ \cline{2-2}
-			& Huawei P20   \\ \cline{2-2}
-			& Huawei P20 Pro  \\ \hline   \centering
-			\multirow{1}{*}{Motorola}     &  Motorola Moto G4  \\ \cline{2-2}
-			\hline \centering
-			\multirow{4}{*}{LG}  & LG V30      \\ \cline{2-2}
-			& LG G6   \\ \cline{2-2}
-			& LG G7  \\ \cline{2-2}
-			& LG G8                        \\ \hline   \centering
-			\multirow{2}{*}{OPPO}   & OPPO R11      \\ \cline{2-2}
-			& OPPO R11t         \\   \hline \centering
-			\multirow{5}{*}{Google}    & Google Pixel              \\ \cline{2-2}
-			& Google Pixel XL   \\ \cline{2-2}
-			& Google Pixel 2   \\ \cline{2-2}
-			& Google Pixel 2 XL   \\ \cline{2-2}
-			& Google Nexus 6P                        \\ \hline   \centering
-			\multirow{2}{*}{Sony}   & Xperia Z5      \\ \cline{2-2}
-			& Xperia XZ         \\   \hline \centering
-			\multirow{23}{*}{Apple}     & iPad Air 2     \\ \cline{2-2}
-			& iPad Mini   \\ \cline{2-2}
-			& iPad Mini 2   \\ \cline{2-2}
-			& iPad Mini 3   \\ \cline{2-2}
-			& iPad Mini 4   \\ \cline{2-2}
-			& iPhone 5   \\ \cline{2-2}
-			& iPhone 5c   \\ \cline{2-2}
-			& iPhone 5s   \\ \cline{2-2}
-			& iPhone SE   \\ \cline{2-2}
-			& iPhone 6   \\ \cline{2-2}
-			& iPhone 6 Plus   \\ \cline{2-2}
-			& iPhone 6S   \\ \cline{2-2}
-			& iPhone 6S Plus   \\ \cline{2-2}
-			& iPhone 7   \\ \cline{2-2}
-			& iPhone 7 Plus   \\ \cline{2-2}
-			& iPhone 8    \\ \cline{2-2}
-			& iPhone 8 Plus   \\ \cline{2-2}
-			& iPhone X   \\ \cline{2-2}
-			& iPad Pro 12.9   \\ \cline{2-2}
-			& iPad Pro 12.9 (2nd Gen)   \\ \cline{2-2}
-			& iPad Pro 10.5   \\ \cline{2-2}
-			& iPad Pro 9.7   \\ \cline{2-2}
-			& iPad (3rd Gen)   \\ \cline{2-2}
-			& iPad (4th Gen)   \\ \cline{2-2}
-			& iPad (5th Gen)  \\  \cline{2-2}
-			& iPad Air   \\ \cline{2-2}
-			& iPod Touch (5th Gen)   \\ \cline{2-2}
-			& iPod Touch (6th Gen)   \\ \hline 
-		\end{tabular}
-		\captionsetup{justification=centering}
-		\caption{Listado de dispositivos compatibles con Vuforia}
-	\end{table}
-		
+	\item \textbf{Reconocimiento de Objetos}.- Si bien el reconocimiento de objetos de Vuforia utiliza el seguimiento de funciones naturales en su núcleo, el proceso de creación de objetos objetivos es bastante diferente en comparación con la creación de objetos de imágenes virtuales. Una imagen contiene características en 2D mediante el análisis de los pixeles del archivo de imagen proporcionado al administrador de destino. Sin embargo, un objeto 3D tiene un tercer eje a considerar. Los objetivos de objeto permiten a los usuarios ver objetos aumentados desde varios ángulos mientras el objeto mantiene su aumento. Antes de aumentar objetos 3D, Vuforia ha desarrollado una aplicación de escaneo que es capaz de obtener los objetos relativamente pequeños usando un cierto "plano de escaneo" sobre el cual se coloca el objeto a escanear, el objeto a ser escaneado sobre el objetivo de la imagen, el escáner de Vuforia puede determinar la coordenada XYZ, representada por un punto verde.\par
+	Vuforia se apoya de un patron o marca como un objetivo detectable por la aplicación. Vuforia trabaja con la posición y orientación, como marco de referencia utiliza un sistema de coordenadas 2D. Algunas de las funciones mas importantes para entender el alcance de esta librería. \cite{B12}
+	Algunos de los dispositivos compatibles con Vuforia se muestran a continuación.
 \end{itemize}
+\begin{table}[h]
+	\begin{tabular}{| p{4.5cm} | p{10.5cm} |}
+		\hline \centering
+		\textbf{Marca}              & \multicolumn{1}{c|}{\textbf{Modelo}}               \\ \hline \centering
+		\multirow{1}{*}{Asus}         & Asus ZenFone AR         	\\ \cline{2-2}
+		\hline \centering
+		\multirow{3}{*}{Xiaomi} & Xiaomi Redmi 3S    \\ \cline{2-2}
+		& Xiaomi Redmi Note 3  \\ \cline{2-2}
+		& Xiaomi Redmi Note 3 Snapdragon     \\ \hline \centering
+		\multirow{7}{*}{Huawei} & Huawei Mate 10   \\ \cline{2-2}
+		& Huawei Mate 10 Pro   \\ \cline{2-2}
+		& Huawei P10   \\ \cline{2-2}
+		& Huawei P10 Lite   \\ \cline{2-2}
+		& Huawei P20 Lite   \\ \cline{2-2}
+		& Huawei P20   \\ \cline{2-2}
+		& Huawei P20 Pro \\ \hline 
+	\end{tabular}
+\captionsetup{justification=centering}
+\caption{Listado de dispositivos compatibles con Vuforia}
+\end{table}
+
+\begin{table}[]
+	\begin{tabular}{| p{4.5cm} | p{10.5cm} |}
+		\hline \centering
+		\textbf{Marca}              & \multicolumn{1}{c|}{\textbf{Modelo}}               \\ \hline \centering
+		\multirow{7}{*}{Huawei} & Huawei Mate 10   \\ \cline{2-2}
+		& Huawei Mate 10 Pro   \\ \cline{2-2}
+		& Huawei P10   \\ \cline{2-2}
+		& Huawei P10 Lite   \\ \cline{2-2}
+		& Huawei P20 Lite   \\ \cline{2-2}
+		& Huawei P20   \\ \cline{2-2}
+		& Huawei P20 Pro  \\ \hline   \centering
+		\multirow{1}{*}{Motorola}     &  Motorola Moto G4  \\ \cline{2-2}
+		\hline \centering
+		\multirow{4}{*}{LG}  & LG V30      \\ \cline{2-2}
+		& LG G6   \\ \cline{2-2}
+		& LG G7  \\ \cline{2-2}
+		& LG G8                        \\ \hline   \centering
+		\multirow{2}{*}{OPPO}   & OPPO R11      \\ \cline{2-2}
+		& OPPO R11t         \\   \hline \centering
+		\multirow{2}{*}{Sony}   & Xperia Z5      \\ \cline{2-2}
+		& Xperia XZ      \\ \hline \centering
+		\multirow{23}{*}{Apple}     & iPad Air 2     \\ \cline{2-2}
+		& iPad Mini   \\ \cline{2-2}
+		& iPad Mini 2   \\ \cline{2-2}
+		& iPad Mini 3   \\ \cline{2-2}
+		& iPad Mini 4   \\ \cline{2-2}
+		& iPhone 5   \\ \cline{2-2}
+		& iPhone 5c   \\ \cline{2-2}
+		& iPhone 5s   \\ \cline{2-2}
+		& iPhone SE   \\ \cline{2-2}
+		& iPhone 6   \\ \cline{2-2}
+		& iPhone 6 Plus   \\ \cline{2-2}
+		& iPhone 6S   \\ \cline{2-2}
+		& iPhone 6S Plus   \\ \cline{2-2}
+		& iPhone 7   \\ \cline{2-2}
+		& iPhone 7 Plus   \\ \cline{2-2}
+		& iPhone 8    \\ \cline{2-2}
+		& iPhone 8 Plus   \\ \cline{2-2}
+		& iPhone X   \\ \cline{2-2}
+		& iPad Pro 12.9   \\ \cline{2-2}
+		& iPad Pro 12.9 (2nd Gen)   \\ \cline{2-2}
+		& iPad Pro 10.5   \\ \cline{2-2}
+		& iPad Pro 9.7   \\ \cline{2-2}
+		& iPad (3rd Gen)   \\ \cline{2-2}
+		& iPad (4th Gen)   \\ \cline{2-2}
+		& iPad (5th Gen)  \\  \cline{2-2}
+		& iPad Air   \\ \cline{2-2}
+		& iPod Touch (5th Gen)   \\ \cline{2-2}
+		& iPod Touch (6th Gen)   \\ \hline 
+	\end{tabular}
+	\captionsetup{justification=centering}
+	\caption{Listado de dispositivos compatibles con Vuforia}
+\end{table}
+\newpage
+\begin{table}[]
+	\begin{tabular}{| p{4.5cm} | p{10.5cm} |}
+		\hline \centering
+		\textbf{Marca}              & \multicolumn{1}{c|}{\textbf{Modelo}}               \\ \hline \centering
+\multirow{5}{*}{Samsumg}     & Samsung Galaxy J5 Pro                       \\ \cline{2-2} 														  
+& Samsung Galaxy S6   \\ \cline{2-2}
+& Samsung Galaxy S6 Edge   \\ \cline{2-2}
+& Samsung Galaxy S6 Edge+   \\ \cline{2-2}
+& Samsung Galaxy A7   \\ \cline{2-2}
+& Samsung Galaxy J7 Pro   \\ \cline{2-2}
+& Samsung Galaxy S7   \\ \cline{2-2}
+& Samsung Galaxy S7 Edge - Exynos   \\ \cline{2-2}
+& Samsung Galaxy S7 Edge - Snapdragon   \\ \cline{2-2}
+& Samsung Galaxy A8+   \\ \cline{2-2}
+& Samsung Galaxy S8   \\ \cline{2-2}
+& Samsung Galaxy S8+   \\ \cline{2-2}
+& Samsung Galaxy S9   \\ \cline{2-2}
+& Samsung Galaxy S9+   \\ \cline{2-2}
+& Samsung Galaxy Note 5 – Exynos   \\ \cline{2-2}
+& Samsung Galaxy Note 8   \\ \cline{2-2}
+& Samsung Galaxy Note 9    \\ \cline{2-2}
+& Galaxy Tab S3 9.7  \\ \hline   \centering
+\multirow{5}{*}{Google}    & Google Pixel              \\ \cline{2-2}
+& Google Pixel XL   \\ \cline{2-2}
+& Google Pixel 2   \\ \cline{2-2}
+& Google Pixel 2 XL   \\ \cline{2-2}
+& Google Nexus 6P    \\ \hline 
+\end{tabular}
+\captionsetup{justification=centering}
+\caption{Listado de dispositivos compatibles con Vuforia}
+\end{table}
+
 \newpage
 \noindent
 \subsubsection{ARToolKit}
@@ -374,43 +406,49 @@ ARCore tiene nueve pilares básicos que permiten integrar contenido virtual en e
 
 \noindent
 Dado que ARCore es una tecnología nueva (su primer publicación oficial fue en febrero de 2018 y su primer versión estable fue en agosto de 2018) la lista de dispositivos compatibles con ella no es tan amplia. En la \textit{Tabla 2} podemos observar una lista con los dispositivos que actualmente soportan ARCore.\cite{B14}
-
-% Please add the following required packages to your document preamble:
-% \usepackage{multirow}
-\begin{table}[]
-	\begin{tabular}{|c|l|}
-		\hline
-		\textbf{Marca}              & \multicolumn{1}{c|}{\textbf{Modelo}}               \\ \hline
+\begin{table}[h]
+	\begin{tabular}{| p{4.5cm} | p{10.5cm} |}
+		\hline \centering
+		\textbf{Marca}              & \multicolumn{1}{c|}{\textbf{Modelo}}               \\ \hline \centering
 		\multirow{2}{*}{ASUS}       & Zenfone AR                                         \\ \cline{2-2} 
-		& Zenfone ARES                                       \\ \hline
+		& Zenfone ARES                                       \\ \hline  \centering
 		\multirow{4}{*}{Google}     & Nexus 5X                                           \\ \cline{2-2} 
 		& Nexus 6P                                           \\ \cline{2-2} 
 		& Pixel, Pixel XL                                    \\ \cline{2-2} 
-		& PIxel 2, Pixel 2 XL                                \\ \hline
+		& PIxel 2, Pixel 2 XL                                \\ \hline \centering
+		\multirow{4}{*}{LG}         & G6                                                 \\ \cline{2-2} 
+		& G7 ThiQ                                            \\ \cline{2-2} 
+		& V30, V30+, V30+ JOJO                               \\ \cline{2-2} 
+		& V35 ThinQ                                          \\ \hline  \centering
 		\multirow{5}{*}{HDM Global} & Nokia 6                                            \\ \cline{2-2} 
 		& Nokia 6.1 Plus                                     \\ \cline{2-2} 
 		& Nokia 7 Plus                                       \\ \cline{2-2} 
 		& Nokia 8                                            \\ \cline{2-2} 
-		& Nokia 8 Sirocco                                    \\ \hline
+		& Nokia 8 Sirocco  \\ \hline
+	\end{tabular}
+\captionsetup{justification=centering}
+\caption{Listado de dispositivos compatibles con ARCore}
+\end{table}
+\newpage
+\begin{table}[]
+	\begin{tabular}{| p{4.5cm} | p{10.5cm} |}
+		\hline \centering
+		\textbf{Marca}              & \multicolumn{1}{c|}{\textbf{Modelo}}               \\ \hline  \centering
 		\multirow{4}{*}{Huawei}     & Honor 10                                           \\ \cline{2-2} 
 		& nova 3, nova 3i                                    \\ \cline{2-2} 
 		& P20, P20 Pro                                       \\ \cline{2-2} 
-		& Porsche Design Mate RS                             \\ \hline
-		\multirow{4}{*}{LG}         & G6                                                 \\ \cline{2-2} 
-		& G7 ThiQ                                            \\ \cline{2-2} 
-		& V30, V30+, V30+ JOJO                               \\ \cline{2-2} 
-		& V35 ThinQ                                          \\ \hline
+		& Porsche Design Mate RS                             \\ \hline  \centering
 		\multirow{7}{*}{Motorola}   & Moto GS5 Plus                                      \\ \cline{2-2} 
 		& Moto G6                                            \\ \cline{2-2} 
 		& Moto G6 Plus                                       \\ \cline{2-2} 
 		& Moto X4                                            \\ \cline{2-2} 
 		& Moto Z2 Force                                      \\ \cline{2-2} 
 		& Moto Z3                                            \\ \cline{2-2} 
-		& Moto Z3 Play                                       \\ \hline
+		& Moto Z3 Play                                       \\ \hline  \centering
 		\multirow{4}{*}{OnePlus}    & OnePlus 3T                                         \\ \cline{2-2} 
 		& OnePlus 5                                          \\ \cline{2-2} 
 		& OnePlus 5T                                         \\ \cline{2-2} 
-		& OnePlus 6                                          \\ \hline
+		& OnePlus 6                                          \\ \hline  \centering
 		\multirow{10}{*}{Samsung}   & Galaxy A5                                          \\ \cline{2-2} 
 		& Galaxy A6                                          \\ \cline{2-2} 
 		& Galaxy A7                                          \\ \cline{2-2} 
@@ -420,7 +458,7 @@ Dado que ARCore es una tecnología nueva (su primer publicación oficial fue en 
 		& Galaxy S7, Galaxy S7 edge                          \\ \cline{2-2} 
 		& Galaxy S8, Galaxy S8+                              \\ \cline{2-2} 
 		& Galaxy S9, Galaxy S9+                              \\ \cline{2-2} 
-		& Galaxy Tab S4                                      \\ \hline
+		& Galaxy Tab S4                                      \\ \hline  \centering
 		\multirow{3}{*}{Sony}       & Xperia XZ Premium                                  \\ \cline{2-2} 
 		& Xperia XZ1, Xperia XZ1 Compact                     \\ \cline{2-2} 
 		& Xperia XZ2, Xperia XZ2 Compact, Xperia XZ2 Premium \\ \hline
@@ -429,6 +467,3 @@ Dado que ARCore es una tecnología nueva (su primer publicación oficial fue en 
 \captionsetup{justification=centering}
 \caption{Listado de dispositivos compatibles con ARCore}
 \end{table}
-
-
-----------------------------------------------
