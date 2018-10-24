@@ -6,9 +6,10 @@
 %\usepackage[spanish]{babel}
 \usepackage{graphicx}
 \usepackage{indentfirst}
+\usepackage[table,xcdraw]{xcolor}
 \usepackage[utf8]{inputenc}
 \usepackage [margin=1in,includefoot]{geometry}
-\usepackage{colortbl}
+%\usepackage{colortbl}
 \usepackage{array,booktabs,xcolor}  %arydshln,multirow
 \usepackage{caption}
 \usepackage{multirow}
@@ -63,7 +64,13 @@
     \input{./marcoTeorico/marcoTeorico}
 	   \input{./marcoTeorico/secciones/disenoInteriores}
 	   \input{./marcoTeorico/secciones/realidadAumentada}
-	   
+    %%%%%%%   ANALISIS   %%%%%%%
+	\input{./analisis/analisis}
+	   \input{./analisis/secciones/descripcionGeneral}
+	   \input{./analisis/secciones/requisitosFuncionales}
+   	   \input{./analisis/secciones/casosDeUso}
+   	   \input{./analisis/secciones/diagramasSecuencia}
+
 	%%%%%%%   DESARROLLO   %%%%%%%
 	\input{./desarrollo/desarrollo}
 		\input{./desarrollo/secciones/exploracion}
