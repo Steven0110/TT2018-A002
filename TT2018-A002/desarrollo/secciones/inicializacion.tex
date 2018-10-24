@@ -37,6 +37,7 @@ Cada Lambda estará enfocada a una funcionalidad principal de la aplicación:\pa
 	\item\textbf{Ver escenario}.- Ësta Lambda permitirá recuperar la información e imágenes de un escenario especificado, con el fin de poder visualizarlo desde la ubicación.
 \end{itemize}
 \noindent
+\textbf{Arquitectura}:
 La aplicación podrá comunicarse a toda la infraestructura de AWS por medio de la API Gateway, que sirve como puerta de enlace tanto para entrar como para salir de AWS. Ésta comunicación se realizará a través del protocolo HTTPS, dada la facilidad de uso que proporciona, además de la capa de seguridad SSL que ya proporciona AWS durante la comunicación con la API Gateway.
 \begin{figure}[h!]
 	\centering
