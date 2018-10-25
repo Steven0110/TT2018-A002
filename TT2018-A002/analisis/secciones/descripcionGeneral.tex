@@ -1,21 +1,12 @@
 \section{Descripción general de la aplicación}
-En esta parte hablaremos por la parte funcional de esta aplicación. La aplicación con realidad aumentada para facilitar el diseño o modificaciones de espacios interiores será capaz de mezclar muebles virtuales con nuestra realidad obtenida por la cámara de nuestro dispositivo anfitrión. \par
+Este sistema móvil sera capaz de  brindarle al usuario final una herramienta que le permita observar muebles virtuales y al mismo tiempo de percibir la realidad obtenida por una cámara,\par
 \vspace{5mm}
-
- Se observará un video en tiempo real de la información virtual sobrepuesta dentro de una realidad de nuestro alrededor, obtenida por nuestra cámara y ofreciendo perspectivas más exactas de la forma y dimensiones de nuestro mueble u objeto de agrado. Los resultados de obtener esta realidad mezclada es generar acierto, certidumbre y seguridad a las necesidades de un usuario con pretensiones de adquirirlo mediante una compra. Esta aplicación será enfocada algún establecimiento de venta de artículos de decoración o para el hogar.  \par
+Se observará un vídeo en tiempo real de la información virtual sobrepuesta dentro del entorno real por medio de la cámara. Las idea es darle una perspectiva más exacta en forma, color, dimensión nuestro mueble u objeto de agrado. Los resultados de obtener esta realidad mezclada es generar acierto, certidumbre y seguridad a las necesidades de un usuario con pretensiones de adquirirlo mediante una compra. Esta aplicación será enfocada al e-Commerce. El comprador potencial seran las mueblerias y establecimientos de venta de articulos de decoracion y el hogar.\par
 \vspace{5mm}
-
-La aplicación móvil con realidad aumentada para el diseño de interiores debe ser un sistema móvil capaz de comunicarse con un servidor que aloje una base de datos MySQL.  Este SGDB será el encargado de alojar la información de los usuarios registrados, muebles e imágenes almacenadas cuando lo requiera la aplicación.  \par
-\vspace{5mm}
-
-Los datos registrados por cada usuario dentro de la aplicación será un nombre, contraseña.\par
-\vspace{5mm}  
-
-Cada mueble creado será alojado en formato base64. El tamaño de almacenamiento de cada objeto dependerá de la complejidad, textura, colores, dimensiones y detalles que influyan significativamente en el proceso de renderización en un dispositivo anfitrión.\par
-\vspace{5mm}
-
-Las imágenes de nuestro mundo real con información virtual de un objeto se podrán almacenar como captura de pantalla de la imagen generada por nuestra cámara en el dispositivo anfitrión.\par
-\vspace{5mm}
-
-Por otro lado, cada dispositivo anfitrión deberá contar con un mínimo de Hardware y software definido en la sección técnica dentro de este documento, los usuarios que interactúen con la aplicación  deberá contar con los permisos necesarios para  gestionar  la interacción con hardware o software disponible.\par
-\vspace{5mm}
+\begin{enumerate}[1.]
+	\item La aplicación debe ser un sistema móvil capaz de comunicarse con los servicios de AWS (Amazon Web Services). Esta plataforma nos ofrecera todo lo necesario para la persistencia de la información. Este SGDB será el encargado de alojar la información de los usuarios, muebles e imágenes almacenadas cuando sea necesario. 
+	\item Los datos registrados por cada usuario dentro de la aplicación será un nombre,correo y contraseña.\par
+	\item Cada mueble creado será alojado en formato base64. El tamaño de almacenamiento de cada objeto dependerá de la complejidad, textura, colores, dimensiones y detalles que influyan significativamente en el proceso de renderización en un dispositivo anfitrión.\par
+	\item Las imágenes de nuestro mundo real con información virtual de los muebles se podrán almacenar y ademas generar imagenes o capturas de pantalla de la imagen generada por la cámara en el dispositivo.\par
+	\item Por otro lado, cada dispositivo anfitrión deberá contar con un mínimo de Hardware y software definido en la sección técnica dentro de este documento, los usuarios que interactúen con la aplicación  deberá contar con los permisos necesarios para  gestionar  la interacción con hardware o software disponible.\par	
+\end{enumerate}
