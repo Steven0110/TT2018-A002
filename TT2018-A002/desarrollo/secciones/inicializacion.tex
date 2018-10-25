@@ -45,6 +45,13 @@ La aplicación podrá comunicarse a toda la infraestructura de AWS por medio de 
 	\caption{Arquitectura de Backend de ARF.}
 	\label{fig:arqbackend}
 \end{figure}
-
+\par
+Por otro lado se requerirá una base de datos que pueda almacenar los usuarios registrados y los escenarios que estos vayan creando. Para el tipo y cantidad de información que se requiere almacenar, una base de datos relacional cumple a ésta necesidad. En la figura  3.16 describe el diseño de la base de datos que se va a usar en ARF, misma que se encuentra en el clúster Amazon RDS mostrado en la figura 3.17.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=10cm,height=7cm]{imagenes/desarrollo/arquitectura/ERD.png}
+	\caption{Modelo Entidad-Relación usado para la base de datos de ARF.}
+	\label{fig:arqbackend}
+\end{figure}
 
 
