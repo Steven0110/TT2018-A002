@@ -16,13 +16,18 @@ La realidad aumentada tiene como objetivo simplificar la vida del usuario al agr
 	\label{fig:analogo}
 \end{figure}
 \subsection{Tecnología de realidad aumentada}
-El registro de imágenes de la realidad aumentada utiliza diferentes métodos de visión por computadora, principalmente relacionados con el seguimiento de vídeo Estos métodos generalmente consisten en dos etapas: reconocimiento y seguimiento/reconstrucción . Primero, se detectan marcadores, imágenes ópticas o puntos de interés en las imágenes de la cámara.\cite{B27} \par
+El registro de imágenes de la realidad aumentada utiliza diferentes métodos de visión por computadora, principalmente relacionados con el seguimiento de vídeo. Estos métodos generalmente consisten en dos etapas: reconocimiento y seguimiento/reconstrucción . Primero, se detectan marcadores, imágenes ópticas o puntos de interés en las imágenes de la cámara.\cite{B27} \par
 \vspace{5mm}
-El reconocimiento puede hacer uso de la detección de características, detección de bordes u otros métodos de procesamiento de imágenes con visión artificial, la mayoría de las técnicas de seguimiento disponibles se pueden separar en dos clases:\cite{B27} \par
+El reconocimiento puede hacer uso de la detección de características, detección de bordes u otros métodos de procesamiento de imágenes con visión artificial, la mayoría de las técnicas de seguimiento disponibles se pueden separar en dos clases\cite{B27}. \par
+\begin{enumerate}[1.]
+	\item Basados en caracteristicas
+	\item Basados en modelos
+\end{enumerate}
+
 \vspace{5mm}
 Los métodos basados en características consisten en descubrir la conexión entre las características de imagen en 2D y sus coordenadas del mundo en 3D. \cite{B27} \par
 \vspace{5mm}
-Estos métodos basados en modelos utilizan el modelo de las características de los objetos rastreados, como los modelos CAD o las plantillas 2D y el marco del mundo en 3D, es posible encontrar la posición de la cámara proyectando las coordenadas 3D de la entidad en las coordenadas de imagen 2D observadas y minimizando la distancia en sus características correspondientes en 2D. Las restricciones para la estimación de la postura de la cámara se determinan con mayor frecuencia utilizando características de puntos.\cite{B27}\par
+Los métodos basados en modelos utilizan las características de los objetos rastreados, como pueden ser modelos basados en CAD o las plantillas 2D.En el renderizado 3D es posible encontrar la posición de la cámara, basandonos en la proyección de las coordenadas 3D, de igual forma las coordenadas de imagen observada en 2D  como se aprecia en la imagen 2.5 \cite{B27}.\par
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=11cm,height=8cm]{imagenes/marcoteorico/ar/tecnologyAR.png}
@@ -30,11 +35,9 @@ Estos métodos basados en modelos utilizan el modelo de las características de 
 	\label{fig:analogo}
 \end{figure}
 \subsection{Tipos de Realidad}
-Una de las partes más importantes de la realidad aumentada es la capacidad del usuario para ver su entorno. Sin embargo, el dispositivo de realidad aumentada también tiene que "verlo", y eso implica un sistema de visión basado en computadora.\cite{B22} \par
+Una de las partes más importantes de la realidad aumentada es la capacidad del usuario para ver su entorno. Sin embargo, el dispositivo de realidad aumentada también tiene que "verlo" y eso implica un sistema de visión basado en computadora \cite{B22} .\par
 \vspace{5mm}
-Una cámara combinada con una pantalla es una configuración atractiva. Tal configuración proporciona retroalimentación basada en la visión que efectivamente cierra el bucle entre los Proceso de ización y visualización. Esto también reduce la necesidad de calibración pesada procedimiento.\cite{B22} \par
-\vspace{5mm}
-Pero, lo que debería, o será el dispositivo de visualización. Tenemos varias opciones, como Se describe en las siguientes secciones. Todas las pantallas utilizadas en los sistemas de realidad aumentada portátiles (excluidas por dispositivos móviles de definición tales como teléfonos inteligentes, tabletas y portátiles) son Normalmente se refiere a pantallas transparentes, cercanas a los ojos o NEDs.\cite{B22} \par
+ Todas las pantallas utilizadas en los sistemas de realidad aumentada portátiles (excluidas por dispositivos móviles de definición tales como teléfonos inteligentes, tabletas y portátiles) son normalmente pantallas transparentes que simulan la vision natura\cite{B22}. \par
 \vspace{5mm}
 \begin{figure}[h!]
 	\centering
@@ -68,16 +71,16 @@ La experiencia de la realidad aumentada en dispositivos dedicados o no dedicados
 
 \end{enumerate}
 
-Mientras Steve Mann en su libro: Intelligent Image Processing (Wiley 2001) sugirió Gesticula lo siguiente: La realidad aumentada debe ser: (a) Ortoespacial (capaz de cartografiar rayos de luz virtual colinealmente con rayos de luz real); (b) ortotonal; (c) Ortotemporal (interactivo en tiempo real). Dice Mann: "Un mediador ideal de la realidad es tal que es capaz de producir un ilusión de transparencia sobre algunos o todos los campos visuales, y por lo tanto cumple todos los criterios anteriores ". Los siguientes son algunos ejemplos de los tipos de productos que componen el mercado de la realidad mentada.\cite{B22} \par
+El autor Steve Mann nos dice acerca de la realidad aumentada: "Un mediador ideal de la realidad es tal que es capaz de producir un ilusión de transparencia sobre algunos o todos los campos visuales.\cite{B22} \par
 \subsection{Impacto de la realidad aumentada}
 Desde su aparición en los 90s, la realidad aumentada ha sido una tecnología de punta la cual sólo estaba disponible en algunos laboratorios y de forma remota al público en general. \par
 Más allá de ser una útil técnica de visualización, actualmente es usada en muchos sectores como la ingenería, la medicina, la robótica, la milicia, la educación, entretenimiento, etc.\par
 La realidad aumentada se ha vuelto una tecnología bastante común, y esto es debido principalmente a la popularidad que tienen los dispositivos inteligentes portátiles (como smartphones y tablets), que ya tienen integradas características como cámaras de video, resolución de alta definición y gran poder computacional que se adecúa al procesamiento de datos relacionados a la realidad aumentada.\par
 Hoy, con el software apropiado, la mayoría de los usuarios de dispositivos inteligentes pueden usar ésta tecnología para múltiples propósitos sin tener que comprar otros dispositivos de costos elevados como los HDM (Head Mounte Displays). Adicionalmente con el anuncio de Google Glasses (AR Glasses), se puede inferir que el siguiente nivel de la realidad aumentada será la implementación de la realidad aumentada en pupilentes. Sin embargo puede asumirse que los dispositivos inteligentes seguirán siendo la herramienta dominante para el propósito general de la realidad aumentada en el futúro.\par
-Como una poderosa herramienta de visualización, la realidad aumentada es aplicable en muchas áreas del diseño. A través de la realidad aumentada, las propuestas de diseño pueden ser examinadas con anticipación. En adición a esto, naturalmente la realidad aumentada mezcla elementos virtuales previamente renderizados con el entorno real, lo cual la convierte particularmente útil para las áreas del diseño que involucran construcción de entornos tales como el diseño urbano, la arquitectura y el diseño de interiores. Al reemplazar una porción del entorno físico con algún modelo tridimensional, la diferencia entre el estatus actual del entorno y el estatus simulado se vuelve evidente, logrando que sea posible previsualizar un diseño, sin necesidad de llevarlo a cabo.\par
+Como una poderosa herramienta de visualización, la realidad aumentada es aplicable en muchas áreas del diseño, las propuestas de diseño pueden ser examinadas, naturalmente la realidad aumentada mezcla elementos virtuales previamente renderizados con el entorno real, lo cual la convierte particularmente útil para las áreas del diseño que involucran construcción de entornos tales como el diseño urbano, la arquitectura y el diseño de interiores. Al reemplazar una porción del entorno físico con algún modelo tridimensional, la diferencia entre el estatus actual del entorno y el estatus simulado se vuelve evidente, logrando que sea posible previsualizar un diseño, sin necesidad de llevarlo a cabo.\par
 En el campo de la investigación del diseño de interiores, la realidad aumentada ha sido usada para simular objetos dentro de un espacio arquitectónico determinado. Estos objetos a menudo son muebles, accesorios o aparatos. Con el entorno físico capturado por un dispositivo en tiempo real y procesado de forma visual, el renderizado de objetos 3D es superpuesto.\cite{B15}
 
-\subsection{Plataformas de realidad aumentada para dispositivos mófilves}
+\subsection{Plataformas de realidad aumentada para dispositivos móvilves}
 El impacto y la popularidad de la realidad aumentada han sido tan grandes, que actualmente existen varias plataformas para desarrollar tecnologías que usen realidad aumentada, ya sea para dispositivos móviles como smartphones y tablets, o para dispositivos integradores como los cascos de realidad virtual. Dentro de las plataformas más usadas podemos encontrar:
 \begin{itemize}
 	\item Wikitude
@@ -105,7 +108,7 @@ Wikitude es una plataforma de desarrollo de aplicaciones móviles, teniendo como
 	
 	\item \textbf{Reconocimiento en la nube}.- El servicio de reconocimiento en la nube de Wikitude permite a los desarrolladores trabajar con miles de imágenes alojadas en la nube y trabaja con un tiempo de respuesta muy rápido.
 	
-	\item \textbf{Aumentado en 3D}.- Esta tecnología cargar y renderiza modelos en 3D sobre la escena proporcionada por la cámara del dispositivo, importando los objetos virtuales desde herramientas de renderizado como \textbf{Autodesk, Maya o Blender 3D}, Wikitude trabaja conjuntamente con Unity3D para integrar animaciones por computadora.\cite{B16}
+	\item \textbf{Aumentado en 3D}.- Esta tecnología carga y renderiza modelos en 3D sobre la escena proporcionada por la cámara del dispositivo, importando los objetos virtuales desde herramientas de renderizado como \textbf{Autodesk, Maya o Blender 3D}, Wikitude trabaja conjuntamente con Unity3D para integrar animaciones por computadora.\cite{B16}
 	
 \end{itemize}
 \noindent
