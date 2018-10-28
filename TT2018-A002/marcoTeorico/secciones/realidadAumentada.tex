@@ -335,44 +335,7 @@ base de datos hasta encontrar la coincidencia de exacta.
 	\label{fig:analogo}
 \end{figure}
 
-Cuando nos movemos de posición, la cámara se apoya de un sistema de coordenadas  en tercera dimensión en relacion a la posicion absoluta del marcador. La cámara está posicionada en el origen del sistema de coordenadas, mirando a lo largo del eje Z. Dos ejes del sistema de coordenadas del marcador son paralelos a los lados del marcador cuadrado. Los sistemas de coordenadas de cámara y el marcador difieren entre ellos con una rotación y una traslación. Esta relación se puede describir con matrices de la siguiente manera:
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=12cm]{imagenes/marcoteorico/plataformas/eq01ArToolKit.png}
-	\caption{Sistemas matriciales para la cámara y la marca.\cite{B13}}
-	\label{fig:analogo}
-\end{figure}
-\newpage
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=10cm]{imagenes/marcoteorico/plataformas/eq02ArToolKit.png}
-	\caption{La relación entre las coordenadas de la proyección de la cámara y las coordenadas de la posición de la cámara.\cite{B13}}
-	\label{fig:analogo}
-\end{figure}
-Los cálculos que utiliza ARToolKit para las líneas de la marca en pantalla se conocen como parámetros intrínsecos de la cámara desde el contorno del marcador se puede describir de la siguiente manera:
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=5cm]{imagenes/marcoteorico/plataformas/eq03ArToolKit.png}
-	\caption{Ecuaciones de las lineas generadas entre el marcador y la camara.\cite{B13}}
-	\label{fig:analogo}
-\end{figure}
-Todos los puntos 3D que se proyectarán a estas dos líneas que se observan en la siguiente imagen.
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=10cm]{imagenes/marcoteorico/plataformas/eq04ArToolKit.png}
-	\caption{Puntos generados que se proyectan en las lineas paralelas de la ecuación 3.\cite{B13}}
-	\label{fig:analogo}
-\end{figure}
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=10cm]{imagenes/marcoteorico/plataformas/positionCameraARToolKit.png}
-	\caption{Descripción gráfica de los cálculos generados entre camara y la marca.\cite{B13}}
-	\label{fig:analogo}
-\end{figure}
-Todos estos puntos en 3D seran proyectados 
-\newpage
-ARToolKit utiliza algunas extensiones para su correcto funcionamiento que a continuación se mencionan.
+Cuando nos movemos de posición, la cámara se apoya de un sistema de coordenadas  en tercera dimensión en relacion a la posicion absoluta del marcador. La cámara está posicionada en el origen del sistema de coordenadas, mirando a lo largo del eje Z. Dos ejes del sistema de coordenadas del marcador son paralelos a los lados del marcador cuadrado. ARToolKit demas utiliza algunas extensiones para su correcto funcionamiento que a continuación se mencionan.
 \begin{itemize}
 	\item \textbf{OpenGL}.- OpenGL es la API de gráficos 2D y 3D más  utilizada por los diseñadores, es una tecnología que esta muy bien documentada la información sobre la implementación de OpenGL en hardware y software.\cite{B14}
 	
