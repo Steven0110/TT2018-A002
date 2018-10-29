@@ -14,8 +14,12 @@ El registro de un usuario nuevo consiste en capturar el correo, nombre y una con
 Si el usuario y la contraseña se encuentra repetido, se enviara un mensaje de error, como se muestra en la figura 3.7
 \newpage
 \subsection{Login}
+<<<<<<< HEAD
 La validación de credenciales comienza con capturar el correo y contraseña  de un usuario registrado. Esta información sera tratada como un objeto JSON, el cual se mandara por una método POST. La API Gateway direccionara la petición a un Servicio AWS y  comparara la información en la instancia creada en RDS de un motor de base de datos MySQL. RDS se encargara de generar la conexión y consulta a la base de datos.
 \vspace{5mm}
+=======
+La validación de credenciales comienza con capturar el correo y contraseña  de un usuario registrado. Esta información sera tratada como un objeto JSON, el cual se mandara por una método POST. La API Gateway direccionara la petición a un Servicio AWS y  comparará la información en la instancia creada en RDS de un motor de base de datos MySQL. RDS se encargara de generar la conexión y consulta a la base de datos. La petición regresara con un mensaje si hubo coincidencia, de lo contrario se enviara un error a la interfaz de usuario.
+>>>>>>> 7cbf0b9ca67fe90765ccdb47c810557903007531
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=14cm,height=8cm]{imagenes/analisis/DSacceso.jpg}
