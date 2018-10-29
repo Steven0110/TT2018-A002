@@ -4,7 +4,7 @@ En éste apartado se definirá el alcance del proyecto, los recursos u herramien
 
 
 \subsubsection{Pruebas de contexto}
-Con el fin de conocer las capacidades de las plataforma ARCore y Vuforia, excluyendo ARKit debido a que su desarrollo en enfocado a sistemas iOS, se realizaron pruebas de contexto definiendo las siguientes especificaciones 	:
+Con el fin de conocer las capacidades de las plataforma ARCore y Vuforia (excluyendo ARKit debido a que su desarrollo en enfocado a sistemas iOS, ARToolkit porque no se centra en dispositivos móviles y a Wikitude por su reducido número de dispositivos compatibles), se realizaron pruebas de contexto definiendo las siguientes especificaciones:
 \begin{itemize}
 	\item Nombre del dispositivo en el que se realizó
 	\item Fecha de prueba
@@ -28,6 +28,16 @@ Por otro lado cada prueba se realizó tomando en cuenta las siguientes caracter�
 \input{./desarrollo/secciones/pruebas/Vuforia/pruebas}
 \noindent
 
+\subsubsection{Conclusión de pruebas de contexto}
+Tras las pruebas de contexto realizadas con ARCore y Vuforia, se tomó la decisión de desarrollar el proyecto con ARCore por las siguientes razones:
+\begin{itemize}
+	\item Vuforia presentó intermitencia en las pruebas de posición cardinal.
+	\item Vuforia depende de un marcador físico para posicionar el objeto.
+	\item La dependencia de Vuforia al marcador físico elimina la capacidad de memoria de objetos.
+	\item Vuforia en ambientes con luz muy baja es incapaz de funcionar.
+	\item Con Vuforia se requieren imprimir tantos marcadores físicos como objetos se deseen visualizar. Es decir, si se quieren mostrar 30 muebles en escena, es necesario imprimir y posicionar los 30 marcadores en el entorno físico.
+\end{itemize}
+
 \subsubsection{Establecimiento de interesados}
 \textbf{Desarrolladores} \par
 Para poder construir la aplicación requeriremos desarrolladores que puedan diseñar la arquitectura que tendrá la aplicación y programarla. Los tres desarrolladores que estarán trabajando en el proyecto son Gerardo Aramis Cabello Acosta, Martín Alejandro Carrillo Mendoza y Saúl del Pilar Morales. Su intervención se requerirá en todas las iteraciones del proyecto desde la I a la IX.\par
@@ -41,7 +51,7 @@ Se requiere contactar a un arquitecto que tenga conocimientos en antropometría 
 Cuando el proyecto esté terminado, acudiremos a varias mueblerías para presentarlo. De esta forma las tiendas que estén interesadas y deseen que sus muebles aparezcan en el catálogo de la aplicación, se convertirán en nuestros socios de negocio. De ésta forma enfocaremos el proyecto al e-Commerce. Su intervención se requerirá tras finalizar la iteración IX, que será la última fase antes de presentar TT II.\par
 
 \subsubsection{Alcance}
-Se desarrollará una aplicación móvil para dispositivos móviles que usen Android como sistema operativo en su versión 7.0 en adelante y que se encuentren dentro de la lista especificada por la \textit{Tabla 2.4}\par
+Se desarrollará una aplicación móvil para dispositivos móviles que usen Android como sistema operativo en su versión 7.0 en adelante y que se encuentren dentro de la lista especificada por la \textit{Tabla 2.6}\par
 El objetivo de la aplicación será lograr que el proceso de diseño de interiores sea más sencillo y rápido, esto a través de la eliminación y reducción de etapas del proceso implicado (véase \textit{Figura 1.1}).
 La aplicación cumplirá las siguientes funciones:\par
 \begin{itemize}
@@ -72,7 +82,7 @@ En ésta iteración vamos hacer el diseño detallado de un mueble. De igual mane
 En ésta iteración vamos a desarrollar el backend de la aplicación para poder realizar el login, registro de cuenta, recuperación de contraseña y el guardado de los escenarios que se vayan generando en la realidad aumentada. Al final de ésta iteración se tendrá el backend totalmente funcional para conectarlo con la aplicación a través del protocolo HTTP.
 
 \textbf{Iteración IV} \par
-En ésta iteración vamos a modificar el entregable de la iteración II, de tal forma que sea posible cambiar el color del mueble durante el tiempo de ejecución de la aplicación.
+En ésta iteración vamos a generar varios modelos de muebles y presentarlos en la aplicación de tal forma que puedan ser seleccionables y puedan ser posicionados de forma individual en el mismo escenario. También vamos a implementar la funcionalidad de tomar una foto del entorno virtual generado y almacenarla en el dispositivo.
 
 
 
