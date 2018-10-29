@@ -9,3 +9,11 @@ El registro de un usuario nuevo consiste en capturar el correo, nombre y una con
 	\caption{Diagrama de secuencia - Registrar usuario.}
 	\label{fig:analogo}
 \end{figure} 
+\subsection{Login}
+La validación de credenciales comienza con capturar el correo y contraseña  de un usuario previamente registrado. Esta información sera tratada como un objeto JSON, el cual se mandara por una método POST. La API Gateway direccionara la petición a un Servicio AWS y  comparara la información en la instancia creada en RDS de un motor de base de datos MySQL. RDS se encargara de generar la conexión y consulta a la base de datos. La petición regresara con un mensaje si hubo coincidencia, de lo contrario se enviara un error a la interfaz de usuario.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=14cm,height=8cm]{imagenes/analisis/DSacceso.jpg}
+	\caption{Diagrama de secuencia - Registrar Acceso.}
+	\label{fig:analogo}
+\end{figure} 
