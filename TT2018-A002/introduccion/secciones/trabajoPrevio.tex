@@ -6,7 +6,7 @@ Las aplicaciones y proyectos que abordan el problema anteriormente descrito son:
 	\item Amazon App
 	\item Fingo
 	\item Ikea Place
-	\item TT 2012-B043
+	\item TT 2012-B043. Realidad aumentada aplicada a la decoración de interiores
 \end{enumerate}
 
 De forma colectiva, en tales aplicaciones pudimos notar las siguientes características:
@@ -26,30 +26,36 @@ Por otro lado, encontramos características que consideramos importantes para re
 \begin{enumerate}
 	\item No están enfocadas a e-Commerce
 	\item No existe un gran repertorio de submodelos de objetos
-	\item No poseen valores agregados en los objetos en general, por ejemplo, que se muestren las propiedades del producto, o que se puedan cambiar colores de productos
+	\item No poseen valores agregados en los objetos en general, por ejemplo, que se muestren las propiedades del producto, o que se puedan cambiar colores de los mismos.
+	\item No muestra presupuestos generales que indiquen los costos de los productos agregados al entorno de realidad aumentada, ni permite definir un presupuesto inicial que limite los objetos que se van a agregar
+	\item No permiten guardar información relacionada a los entornos de realidad aumentada generados
 \end{enumerate}
 
 En la \textbf{\textit{Tabla 1}} podemos apreciar una comparación de las aplicaciones anteriores y la aplicación que planeamos hacer con base en las características previamente descritas:\par
 
 % Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
 % \usepackage[table,xcdraw]{xcolor}
 % If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
-\begin{table}[h]
-	\centering
-	\begin{tabular}{|p{3.2cm}|c|c|c|c|p{2.5cm}|c|}
-		\textbf{Características}              & \textbf{Canvas}                   & \textbf{Tango}                    & \textbf{Fingo}                    & \textbf{Ikea Place}               & \textbf{TT 2012-B043}            & \textbf{Nuestra App}               \\\hline
-		Escaneo                      & \cellcolor[HTML]{BFBFBF} &                          & \cellcolor[HTML]{BFBFBF} &                          & \cellcolor[HTML]{BFBFBF} & \cellcolor[HTML]{BFBFBF} \\\hline
-		Exportar                     & \cellcolor[HTML]{BFBFBF} &                          &                          &                          &                          &                          \\\hline
-		Enfoque                      &                          & \cellcolor[HTML]{BFBFBF} &                          & \cellcolor[HTML]{BFBFBF} & \cellcolor[HTML]{BFBFBF} & \cellcolor[HTML]{BFBFBF} \\\hline
-		Posición relativa            &                          & \cellcolor[HTML]{BFBFBF} &                          & \cellcolor[HTML]{BFBFBF} &                          & \cellcolor[HTML]{BFBFBF} \\\hline
-		Hardware externo             & \cellcolor[HTML]{BFBFBF} &                          & \cellcolor[HTML]{BFBFBF} & \cellcolor[HTML]{BFBFBF} & \cellcolor[HTML]{BFBFBF} &                          \\\hline
-		e-Commerce                   &                          &                          &                          &                          &                          & \cellcolor[HTML]{BFBFBF} \\\hline
-		Variedad                     &                          &                          & \cellcolor[HTML]{BFBFBF} &                          & \cellcolor[HTML]{BFBFBF} & \cellcolor[HTML]{BFBFBF} \\\hline
-		Diseños realistas de objetos &                          & \cellcolor[HTML]{BFBFBF} & \cellcolor[HTML]{BFBFBF} & \cellcolor[HTML]{BFBFBF} &                          & \cellcolor[HTML]{BFBFBF} \\\hline
-		Valor agregado               &                          &                          &                          &                          &                          & \cellcolor[HTML]{BFBFBF} \\\hline
-	\end{tabular}
-\captionsetup{justification=centering}
-\caption*{Tabla 1. Comparación de aplicaciones que abordan la realidad aumentada y el diseño de interiores}
+\begin{table}[]
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{|l|l|l|l|l|l|l|}
+			\hline
+			\textbf{Características}       & \textbf{Canvas}                                 & \textbf{Tango}           & \textbf{Fingo}           & \textbf{Ikea Place}      & \textbf{TT 2012-B043}    & \textbf{Nuestra App}     \\ \hline
+			Escaneo                        & \cellcolor[HTML]{BFBFBF}{\color[HTML]{C0C0C0} } &                          & \cellcolor[HTML]{BFBFBF} & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{BFBFBF} & \cellcolor[HTML]{BFBFBF} \\ \hline
+			Exportar                       & \cellcolor[HTML]{BFBFBF}                        &                          &                          & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{FFFFFF} &                          \\ \hline
+			Enfoque                        &                                                 & \cellcolor[HTML]{BFBFBF} &                          & \cellcolor[HTML]{BFBFBF} & \cellcolor[HTML]{BFBFBF} & \cellcolor[HTML]{BFBFBF} \\ \hline
+			Posición relativa              &                                                 & \cellcolor[HTML]{BFBFBF} &                          & \cellcolor[HTML]{BFBFBF} & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{BFBFBF} \\ \hline
+			Hardware externo               & \cellcolor[HTML]{BFBFBF}                        &                          & \cellcolor[HTML]{BFBFBF} & \cellcolor[HTML]{BFBFBF} & \cellcolor[HTML]{BFBFBF} &                          \\ \hline
+			e-Commerce                     &                                                 &                          &                          & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{BFBFBF} \\ \hline
+			Variedad                       &                                                 &                          & \cellcolor[HTML]{BFBFBF} & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{BFBFBF} & \cellcolor[HTML]{BFBFBF} \\ \hline
+			Diseños realistas de objetos   &                                                 &                          & \cellcolor[HTML]{BFBFBF} & \cellcolor[HTML]{BFBFBF} & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{BFBFBF} \\ \hline
+			Valor agregado                 &                                                 &                          & \cellcolor[HTML]{BFBFBF} & \cellcolor[HTML]{BFBFBF} & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{BFBFBF} \\ \hline
+			Presupuesto general            &                                                 &                          &                          &                          &                          & \cellcolor[HTML]{BFBFBF} \\ \hline
+			Presupuesto inicial            &                                                 &                          &                          &                          &                          & \cellcolor[HTML]{BFBFBF} \\ \hline
+			Guardar información del diseño &                                                 &                          &                          &                          &                          & \cellcolor[HTML]{BFBFBF} \\ \hline
+		\end{tabular}%
+	}
+	\caption{Comparativo de aplicaciones sobre diseño de interiores}
+	\label{my-label}
 \end{table}
-
-  
