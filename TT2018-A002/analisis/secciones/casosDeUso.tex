@@ -25,10 +25,10 @@ Es el escenario de autenticación y acceso de usuario a la aplicación.
 Es el escenario donde un usuario registra una nueva cuenta para poder tener acceso al sistema.
 \begin{itemize}
 	\item En la pantalla inicial, el usuario selecciona el botón "Registrar".
-	\item Se mostrará una pantalla con un pequeño formulario donde el usuario ingresará sus datos como son: nombre, email y contraseña. La contraseña debe cumplir con la BRX. También habrá un campo adicional donde deberá introducir de nuevo la contraseña para verificar que el usuario la escribió como la pensó inicialmente.
+	\item Se mostrará una pantalla con un pequeño formulario donde el usuario ingresará sus datos como son: nombre, email y contraseña. La contraseña debe cumplir con la BR2. También habrá un campo adicional donde deberá introducir de nuevo la contraseña para verificar que el usuario la escribió como la pensó inicialmente.
 	\item Tras haber llenado esos campos el usuario selecciona el botón "Registrar cuenta".
-	\item Si hay algún error en el formulario (por ejemplo, el email no tiene la sintaxis que debe tener un email o la contraseña no cumple con la regla de negocio BRX) se mostrará en pantalla a través de un mensaje.
-	\item De ser exitoso el proceso anterior, el sistema consulta la base de datos para verificar que se cumpla la regla de negocio BRX. Si no se cumple, un mensaje en pantalla es msotrado diciendo que el correo ya ha sido registrado en otra cuenta. Si es cumplida, el sistema genera un registro de usuario con los datos ingresados.
+	\item Si hay algún error en el formulario (por ejemplo, el email no tiene la sintaxis que debe tener un email o la contraseña no cumple con la regla de negocio BR2) se mostrará en pantalla a través de un mensaje.
+	\item De ser exitoso el proceso anterior, el sistema consulta la base de datos para verificar que se cumpla la regla de negocio BR1. Si no se cumple, un mensaje en pantalla es msotrado diciendo que el correo ya ha sido registrado en otra cuenta. Si es cumplida, el sistema genera un registro de usuario con los datos ingresados.
 	\item El sistema muestra en pantalla un mensaje diciendo que el usuario fue creado con éxito y la pantalla mostrada cambia a la inicial donde el usuario puede iniciar sesión con los datos de la cuenta que acaba de crear.
 \end{itemize}
 \newpage
@@ -44,9 +44,9 @@ Es el escenario donde un usuario recupera el acceso a una cuenta de la cual olvi
 	\item El usuario selecciona el botón "Verificar código".
 	\item El sistema verifica que el valor ingresado contenga sólo números. De haber un error en la entrada el sistema lo muestra en un mensaje.
 	\item Tras la verificación anterior exitosa, el sistema verifica que el código ingresado sea el mismo que se generó y envío al correo. De ser incorrecto el sistema lo notifica en pantalla a través de un correo.
-	\item Si el código ingresado coincide, entonces el sistema muestra una pantalla que tiene dos campos para contraseña. En el primer campo el usuario debe introducir una nueva contraseña, la cual debe cumplir con la regla de negocio BRX. En el segundo campo debe volver a escribir la misma contraseña.
+	\item Si el código ingresado coincide, entonces el sistema muestra una pantalla que tiene dos campos para contraseña. En el primer campo el usuario debe introducir una nueva contraseña, la cual debe cumplir con la regla de negocio BR2. En el segundo campo debe volver a escribir la misma contraseña.
 	\item El usuario selecciona el botón "Actualizar contraseña"
-	\item El sistema valida que la contraseña cumpla con la regla de negocio BRX, de no ser así, lo notifica en pantalla a través de un mensaje.
+	\item El sistema valida que la contraseña cumpla con la regla de negocio BR2, de no ser así, lo notifica en pantalla a través de un mensaje.
 	\item El sistema cambia la contraseña del usuario por la que acaba de ingresar. Tras esto la pantalla muestra un mensaje diciendo si la actualización fue exitosa o no.
 	\item De ser exitosa, la pantalla mostrada vuelve a ser la del Login inicial donde el usuario podrá iniciar sesión con su correo y la nueva contraseña.
 \end{itemize}
