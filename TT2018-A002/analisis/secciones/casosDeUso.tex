@@ -5,11 +5,22 @@ El la siguiente sección se definen y describen los actores, funciones y escenar
 \vspace{5mm}
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=15cm,height=17cm]{imagenes/analisis/casosDeUso.jpg}
+	\includegraphics[width=17cm,height=9cm]{imagenes/analisis/cu/cu_complete.jpg}
 	\caption{Casos de uso.}
-	\label{fig:analogo}
+	\label{fig:casosdeuso}
 \end{figure}  
 \newpage
+
+\subsection{CU0. Generalización de actores}\par
+Tendremos dos actores a los cuales está destinada la aplicación: diseñadores de interiores y habitantes comunes de inmuebles, ambos tendrán las mismas funcionalidades a su alcance y lo que los diferenciará dentro de la aplicación será el interés que cada usuario tenga en tales funciones, \textit{v.g. el diseñador de interiores tendrá mayor interés en almacenar proyectos y escenarios que el habitante común de un inmueble}, por lo que se considerará una generalización de ambos actores a un usuario general.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=8cm,height=5cm]{imagenes/analisis/cu/generalizacion.jpg}
+	\caption{CU0. Generalización de actores.}
+	\label{fig:generalizacionactores}
+\end{figure} 
+
 
 \subsection{CU1. Iniciar sesión}\par
 Es el escenario de autenticación y acceso de usuario a la aplicación. 
@@ -21,6 +32,13 @@ Es el escenario de autenticación y acceso de usuario a la aplicación.
 	\item Si encuentra una coincidencia, se muestra el menú principal donde el usuario puede visualizar sus escenarios y proyectos. Si no se encuentra una coincidencia, se muestra un mensaje en pantalla diciendo que los datos ingresados son incorrectos, y la pantalla mostrada seguirá siendo el Login mientras la autenticación no sea exitosa.
 \end{itemize}
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=8cm,height=4cm]{imagenes/analisis/cu/iniciar_sesion.jpg}
+	\caption{CU1. Inicio de sesión.}
+	\label{fig:iniciosesion}
+\end{figure} 
+
 \subsection{CU2. Registrar cuenta} \par
 Es el escenario donde un usuario registra una nueva cuenta para poder tener acceso al sistema.
 \begin{itemize}
@@ -31,6 +49,14 @@ Es el escenario donde un usuario registra una nueva cuenta para poder tener acce
 	\item De ser exitoso el proceso anterior, el sistema consulta la base de datos para verificar que se cumpla la regla de negocio BR1. Si no se cumple, un mensaje en pantalla es msotrado diciendo que el correo ya ha sido registrado en otra cuenta. Si es cumplida, el sistema genera un registro de usuario con los datos ingresados.
 	\item El sistema muestra en pantalla un mensaje diciendo que el usuario fue creado con éxito y la pantalla mostrada cambia a la inicial donde el usuario puede iniciar sesión con los datos de la cuenta que acaba de crear.
 \end{itemize}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=8cm,height=4cm]{imagenes/analisis/cu/registrar_cuenta.jpg}
+	\caption{CU2. Registro de cuenta.}
+	\label{fig:registrarcuenta}
+\end{figure} 
+
 \newpage
 \subsection{CU3. Recuperar cuenta}  \par
 Es el escenario donde un usuario recupera el acceso a una cuenta de la cual olvidó su contraseña
@@ -51,6 +77,13 @@ Es el escenario donde un usuario recupera el acceso a una cuenta de la cual olvi
 	\item De ser exitosa, la pantalla mostrada vuelve a ser la del Login inicial donde el usuario podrá iniciar sesión con su correo y la nueva contraseña.
 \end{itemize}
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=8cm,height=4cm]{imagenes/analisis/cu/recuperar_cuenta.jpg}
+	\caption{CU3. Recuperar cuenta.}
+	\label{fig:recuperarcuenta}
+\end{figure} 
+
 \subsection{CU4. Crear proyecto}\par
 Es el escenario donde un usuario crea un proyecto para poder guardar escenarios dentro de él.\par
 \textbf{Precondición:} Haber iniciado sesión correctamente.\par
@@ -63,6 +96,13 @@ Es el escenario donde un usuario crea un proyecto para poder guardar escenarios 
 	\item El sistema muestra en pantalla un mensaje diciendo si la creación del proyecto fue exitosa o no.
 	\item De ser correcta la creación del proyecto, la pantalla mostrada vuelve a ser el menú principal, donde el usuario podrá ver el proyecto creado selecciona el botón "Ver proyectos"
 \end{itemize}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=8cm,height=4cm]{imagenes/analisis/cu/crear_proyecto.jpg}
+	\caption{CU4. Crear proyecto.}
+	\label{fig:crearproyecto}
+\end{figure} 
 
 \newpage
 \subsection{CU5. Ver proyecto}\par
@@ -79,6 +119,13 @@ Es el escenario donde un usuario registrado puede ver los proyectos que ha cread
 	\item El sistema vuelve a mostrar la pantalla de visualización de proyecto.
 \end{itemize}
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=8cm,height=4cm]{imagenes/analisis/cu/ver_proyectos.jpg}
+	\caption{CU5. Ver proyecto}
+	\label{fig:verproyecto}
+\end{figure} 
+
 \subsection{CU6. Ver escenario}\par
 Es el escenario donde un usuario registrado puede ver los escenarios que ha creado con la aplicación.\par
 \textbf{Precondición:} Haber iniciado sesión correctamente y estar en la pantalla de visualización de proyecto.\par
@@ -94,6 +141,13 @@ Es el escenario donde un usuario registrado puede ver los escenarios que ha crea
 	\item El sistema vuelve a mostrar la pantalla de visualización de escenario.
 \end{itemize}
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=8cm,height=4cm]{imagenes/analisis/cu/ver_escenarios.jpg}
+	\caption{CU6. Ver escenario.}
+	\label{fig:verescenario}
+\end{figure} 
+
 \subsection{CU7. Agregar mueble a escena}\par
 Es el escenario donde un usuario registrado puede agregar un mueble.\par
 \textbf{Precondición:} Haber iniciado sesión correctamente y estar en la pantalla de cámara.\par
@@ -103,6 +157,13 @@ Es el escenario donde un usuario registrado puede agregar un mueble.\par
 	\item El menú de muebles se oculta, mostrando en pantalla la cámara con un botón "Colocar" y un punto de referencia de color verde en el centro.
 	\item El usuario selecciona el botón "Colocar" y el mueble seleccionado aparece en el escenario de la cámara justo donde se encontraba el punto de referencia
 \end{itemize}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=8cm,height=4cm]{imagenes/analisis/cu/agregar_mueble.jpg}
+	\caption{CU7. Agregar mueble a escena.}
+	\label{fig:agregarmueble}
+\end{figure} 
 
 \subsection{CU8. Visualizar catálogo}\par
 Es el escenario donde un usuario registrado puede visualizar el catálogo de muebles para agregarlos a la escena.\par
@@ -116,6 +177,13 @@ Es el escenario donde un usuario registrado puede visualizar el catálogo de mue
 	\item El sistema despliega un tercer listado al lado del anterior, el cual contiene miniaturas de los muebles que pertenecen al tipo y tamaño de habitación seleccionados.
 \end{itemize}
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=8cm,height=4cm]{imagenes/analisis/cu/visualizar_catalogo.jpg}
+	\caption{CU8. Visualizar catálogo.}
+	\label{fig:visualizarcatalogo}
+\end{figure} 
+
 \subsection{CU9. Borrar mueble de escena}\par
 Es el escenario donde un usuario registrado borra un mueble anteriormente colocado.\par
 \textbf{Precondición:} Haber iniciado sesión correctamente, estar en la pantalla de cámara y haber agregado al menos un mueble a la escena.\par
@@ -126,6 +194,13 @@ Es el escenario donde un usuario registrado borra un mueble anteriormente coloca
 	\item El usuario selecciona la opción "Eliminar".
 	\item El mueble seleccionado desaparece de la vista.
 \end{itemize}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=8cm,height=4cm]{imagenes/analisis/cu/borrar_mueble.jpg}
+	\caption{CU9. Borrar mueble de escena.}
+	\label{fig:borrarmueble}
+\end{figure} 
 
 
 \subsection{CU10. Cambiar color de mueble agregado}\par
@@ -143,6 +218,13 @@ Es el escenario donde un usuario registrado cambia el color de ub mueble anterio
 	\item El usuario selecciona el botón "Cerrar" para retirar los botones "Eliminar" y "Cambiar color" de la pantalla
 \end{itemize}
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=8cm,height=4cm]{imagenes/analisis/cu/cambiar_color.jpg}
+	\caption{CU10. Cambiar color de mueble agregado.}
+	\label{fig:cambiarcolor}
+\end{figure} 
+
 \subsection{CU11. Tomar foto}\par
 Es el escenario donde un usuario registrado toma una fotografía del escenario para guardarla.\par
 \textbf{Precondición:} Haber iniciado sesión correctamente y estar en la pantalla de cámara.\par
@@ -153,6 +235,13 @@ Es el escenario donde un usuario registrado toma una fotografía del escenario p
 	\item El sistema muestra un pequeño mensaje emergente diciendo que la foto ha sido guardada con éxito.
 	\item Al finalizar la creación del escenario el usuario puede visualizar en una rejilla todas las fotos que fueron tomadas.
 \end{itemize}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=8cm,height=4cm]{imagenes/analisis/cu/tomar_foto.jpg}
+	\caption{CU11. Tomar foto.}
+	\label{fig:tomarfoto}
+\end{figure} 
 
 \subsection{CU12. Grabar video}\par
 Es el escenario donde un usuario registrado puede grabar un video de la escena que esté creando.\par
@@ -166,6 +255,13 @@ Es el escenario donde un usuario registrado puede grabar un video de la escena q
 	\item El sistema muestra un pequeño mensaje emergente diciendo que la foto ha sido guardada con éxito.
 	\item Al finalizar la creación del escenario el usuario puede visualizar en una rejilla todas las fotos que fueron tomadas incluyendo los videos que fueron grabados.
 \end{itemize}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=8cm,height=4cm]{imagenes/analisis/cu/grabar_video.jpg}
+	\caption{CU12. Grabar video.}
+	\label{fig:grabarvideo}
+\end{figure} 
 
 \subsection{CU13. Guardar escenario}\par
 Es el escenario donde un usuario crea el escenario de acuerdo a sus gustos y necesidades y procede a guardarlo para poder consultarlo en un futuro.\par
@@ -182,7 +278,8 @@ Es el escenario donde un usuario crea el escenario de acuerdo a sus gustos y nec
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=12cm,height=6cm]{imagenes/analisis/visualizarEscenario.jpg}
-	\caption{CU5 - Visualizar escenario.}
-	\label{fig:analogo}
-\end{figure}
+	\includegraphics[width=8cm,height=4cm]{imagenes/analisis/cu/guardar_escenario.jpg}
+	\caption{CU13. Guardar escenario.}
+	\label{fig:guardarescenario}
+\end{figure} 
+
