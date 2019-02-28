@@ -13,3 +13,14 @@ Las contraseñas de las cuentas que se registren deberán cumplir con lo siguien
 	\item Tener al menos un caracter especial.
 	\item Tener al menos una longitud de 8 caracteres.
 \end{itemize}
+
+\subsection{BR3. Seguridad en recuperación de cuenta}
+Debe haber un mecanismo que asegure que solamente el usuario de una cuenta pueda reestablecer su contraseña. El mecanismo es el siguiente:
+\begin{itemize}
+	\item El usuario solicita la recuperación de su cuenta.
+	\item Se genera un código de recuperación y se asocia a su cuenta.
+	\item El código de recuperación es enviado via email al correo registrado en la cuenta.
+	\item Se le solicita al usuario que escriba el código recibido para confirmar su autenticidad.
+	\item Se valida que el código ingresado por el usuario es el mismo que el generado previamente.
+	\item El usuario podrá volver a definir su contraseña si la validación anterior es correcta.
+\end{itemize}
