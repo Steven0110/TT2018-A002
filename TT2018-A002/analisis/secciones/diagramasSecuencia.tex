@@ -7,22 +7,23 @@ El inicio de sesión consiste en la captura de usuario y contraseña de una cuen
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=14cm,height=8cm]{imagenes/analisis/ds/dsinicio_sesion.jpg}
+	\includegraphics[width=14cm,height=14cm]{imagenes/analisis/ds/dsinicio_sesion.jpg}
 	\caption{DS1. Inicio de sesión.}
 	\label{fig:dsiniciosesion}
 \end{figure}
 
+\clearpage
 
 \subsection{DS2. Registro de cuenta}
 El registro de cuenta consiste en la captura de nombre, email y contraseña. La contraseña se deberá repetir. Esos datos se envían en formato JSON a AWS API Gateway la cual se encarga de ejecutar la AWS Lambda \textit{ARFRegisterAccount}. Esta función se encarga primero de consultar el correo para verificar que se cumpla la regla de negocio \textbf{BR1}. Si la regla se cumple, entonces el usuario es registrado por esta función. Ya sea que la inserción sea realizado con éxito o no, la función construye nu JSON de respuesta que contiene el status de la operación, y esta respuesta es manipulada por la aplicación para mostrar en pantalla un error, o redirigir el usuario a la pantalla de Inicio de sesión.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=14cm,height=8cm]{imagenes/analisis/ds/RegCuenta.jpg}
+	\includegraphics[width=14cm,height=16cm]{imagenes/analisis/ds/RegCuenta.jpg}
 	\caption{DS2. Registro de cuenta.}
 	\label{fig:dsregcuenta}
 \end{figure}
-
+\clearpage
 
 \subsection{DS3. Recuperación de cuenta}
 El proceso de recuperación se divide en tres pasos:
@@ -34,11 +35,11 @@ El proceso de recuperación se divide en tres pasos:
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=14cm,height=8cm]{imagenes/analisis/ds/RecCuenta.jpg}
+	\includegraphics[width=13cm,height=22cm]{imagenes/analisis/ds/RecCuenta.jpg}
 	\caption{DS3. Recuperación de cuenta.}
 	\label{fig:dsreccuenta}
 \end{figure}
-
+\clearpage
 
 \subsection{DS4. Gestión de proyectos}
 Aquí se presentan cinco escenarios: creación de proyecto, actualización de proyecto, eliminación de proyecto, obtención de proyecto, y obtención de proyectos de usuario.
@@ -56,7 +57,7 @@ Aquí se presentan cinco escenarios: creación de proyecto, actualización de pr
 	\caption{DS4. Gestión de proyectos.}
 	\label{fig:dsreccuenta}
 \end{figure}
-
+\clearpage
 
 
 \subsection{DS5. Gestión de escenarios}
@@ -71,7 +72,8 @@ Aquí se presentan cinco escenarios: creación de escenario, actualización de e
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=14cm,height=8cm]{imagenes/analisis/ds/CrearEscenario.jpg}
+	\includegraphics[width=14cm,height=20cm]{imagenes/analisis/ds/CrearEscenario.jpg}
 	\caption{DS5. Gestión de escenarios.}
 	\label{fig:dsreccuenta}
 \end{figure}
+\clearpage
