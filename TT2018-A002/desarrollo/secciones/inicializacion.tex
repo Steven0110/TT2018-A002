@@ -1,30 +1,26 @@
 \subsection{Inicialización}
-En ésta fase se describirá la linea base sobre la que se desarrollará el proyecto, esto significa, definir las herramientas y dispositivos con los que se realizará el desarrollo, qué tecnologías vamos a usar y el planteamiento general del sistema.\par
+En ésta fase se describirá la linea base sobre la que se desarrollará el proyecto, esto significa, definir las herramientas y dispositivos con los que se realizará el desarrollo y testing, qué tecnologías vamos a usar y el planteamiento general del sistema.\par
 \noindent
 \\
 \textbf{Herramientas y Tecnologías}:
 	\begin{itemize}
-			\item Amazon Web Services
-			\item Android 8 Oreo y Android 7 Nougat
+			\item \textbf{Amazon Web Services.} Amazon Web Services (AWS) es una infraestructura de servicios en la nube usados para el desarrollo de sistemas. AWS tiene una gran cantidad de servicios útiles para el desarrollo de ARF de los cuales se usarán los siguientes para el desarrollo de ARF: S3 (almacenamiento), RDS (base de datos), Lambda (ejecución de código en la nube), API Gateway (comunicación con Lambda via internet).
+			\item \textbf{Android 8 Oreo y Android 7 Nougat.} Estas son las versiones de Android que son compatibles con ARCore 1.5
 			\item Android Studio 2.19
-			\item Arcore 1.5
-			\item Blender 2.79
-			\item Debian  9.5
-			\item Git
-			\item GitHub
-			\item Java 7
-	  		\item JSON
-			\item Windows 10
-			\item XML		
+			\item \textbf{ARCore 1.5.} Es una librería para el desarrollo de aplicaciones con realidad aumentada de Google. Tras las pruebas de contexto se eligió usar ARCore en su versión 1.5 que es la versión estable más actual.
+			\item \textbf{Blender 2.79.} Es un modelador y renderizador de objetos en 3D. Se usará para las primeras integraciones de ARCore donde utilizaremos modelos 3D de elaboración propia.
+			\item \textbf{GitHub.} Es un sistema de control de versiones que sirve para tener el código fuente centralizado en repositorios y que varias personas puedan actualizar simultáneamente el código de forma rápida y sencilla. El código de ARF estará alojado en un repositorio de GitHub.
+			\item \textbf{Git.} Es un cliente usado para la integración de GitHub en plataformas como Windows y GNU-Linux. Se usará para realizar la comunicación con GitHub.
+	  		\item \textbf{JSON.} Es un formato para la estructuración de datos. Se usará debido a su facilidad de uso e integración con AWS.
 	\end{itemize}
 	\noindent
 \textbf{Dispositivos}:
 \begin{itemize}
-	\item Laptop Acer, procesador Intel Core i3 6ta generación, 4GB de RAM, 1TB en disco duro, sistema operativo Debian  9.5
-	\item Laptop HP, procesador Intel Core i5 6ta generación, 4GB de RAM, 1TB en disco duro, sistema operativo Windows 10
-	\item Laptop Toshiba, procesador Intel Core i3 5ta generación, 4GB de RAM, 1TB en disco duro, sistema operativo Debian 9.5
-	\item Moto G6
-	\item Moto G6 plus		
+	\item \textbf{Laptop.} Marca Acer, procesador Intel Core i3 6ta generación, 4GB de RAM, 1TB en disco duro, S.O. Debian 9.5
+	\item \textbf{Laptop.} Marca HP, procesador Intel Core i5 6ta generación, 4GB de RAM, 1TB en disco duro, S.O. Windows 10
+	\item \textbf{PC} Procesador AMD Ryzen 7 1800X, 16GB de RAM, 1TB en disco duro, S.O. Windows 10
+	\item \textbf{Móvil.} Moto G6, procesador Snapdragon 450 a 1.8GHz, 3GB de RAM, 32GB de almacenamiento, S.O. Android 8.0
+	\item \textbf{Móvil.} Moto G6+, procesador Snapdragon 630 a 2.2GHz, 4GB de RAM, 32GB de almacenamiento, S.O. Android 8.0	
 \end{itemize}
 \noindent
 \textbf{Arquitectura}:

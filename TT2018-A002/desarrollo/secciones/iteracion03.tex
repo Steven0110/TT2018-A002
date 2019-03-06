@@ -1,6 +1,6 @@
 \section{Iteración III}
 \subsection{Resumen}
-En ésta iteración se realizó el frontend del login de ARF así como el backend para los módulos "LOGIN", "REGISTRAR CUENTA" y "GUARDAR ESCENARIO" de acuerdo a la arquitectura descrita en la figura 4.25. \par
+En ésta iteración se realizó el frontend del login de ARF así como el backend para los módulos ``LOGIN", ``REGISTRAR CUENTA" y ``GUARDAR ESCENARIO" de acuerdo a la arquitectura descrita en la figura 4.25. \par
 
 %\subsection{Diagramación}
 \subsection{Desarrollo}
@@ -61,7 +61,7 @@ El objetivo de ésta función es poder almacenar los escenarios que vayan genera
 	\label{fig:regsuccess}
 \end{figure}
 
-La función recibe como parámetros el id del usuario al que se va a asociar el escenario, el nombre del escenario y un array de imágenes en formato \textbf{Base64}. una vez recibidos estos atributos, la función se encarga de convertir las imágenes en formato binario para después guardarlas en un Bucket de AWS S3 (Simple Storage Service) que no es más que un contenedor de archivos. Una vez guardadas las imágenes en el Bucket, se obtienen los nombres y las URL de las imágenes guardadas. Los nombres sirven para guardar el escenario en una base de datos, y posteriormente poder recuperarlos del Bucket a través del nombre. Las URL de las imágenes se envían con el objetivo de poder visualizar el escenario guardado en el dispositivo móvil obteniendo las imágenes directamente del almacenamiento en la nube. El proceso de devolver las URL de las imágenes será implementado también en la función de "VER ESCENARIO" con el objetivo de hacer que la respuesta a la petición sea más ligera, y con ello más rápida. El flujo de ésta función se puede ver en la figura 4.35.
+La función recibe como parámetros el id del usuario al que se va a asociar el escenario, el nombre del escenario y un array de imágenes en formato \textbf{Base64}. una vez recibidos estos atributos, la función se encarga de convertir las imágenes en formato binario para después guardarlas en un Bucket de AWS S3 (Simple Storage Service) que no es más que un contenedor de archivos. Una vez guardadas las imágenes en el Bucket, se obtienen los nombres y las URL de las imágenes guardadas. Los nombres sirven para guardar el escenario en una base de datos, y posteriormente poder recuperarlos del Bucket a través del nombre. Las URL de las imágenes se envían con el objetivo de poder visualizar el escenario guardado en el dispositivo móvil obteniendo las imágenes directamente del almacenamiento en la nube. El proceso de devolver las URL de las imágenes será implementado también en la función de ``VER ESCENARIO" con el objetivo de hacer que la respuesta a la petición sea más ligera, y con ello más rápida. El flujo de ésta función se puede ver en la figura 4.35.
 
 \begin{figure}[H]
 	\centering
