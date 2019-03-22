@@ -24,17 +24,33 @@ En ésta fase se describirá la linea base sobre la que se desarrollará el proy
 \end{itemize}
 \noindent
 \textbf{Arquitectura}:
-El backend de la aplicación se encontrará sobre la infraestructura de Amazon Web Services (AWS), debido a la alta escalabilidad que proporciona. La arquitectura contendrá un cluster RDS con MySQL, cinco Lambdas, un Bucket de S3 y una API Gateway (véase Figura 3.15).\par
-Cada Lambda estará enfocada a una funcionalidad principal de la aplicación:\par
+El backend de la aplicación se encontrará sobre la infraestructura de Amazon Web Services (AWS), debido a la alta escalabilidad que proporciona. La arquitectura contendrá un cluster RDS con MySQL, nueve Lambdas, un Bucket de S3 y una API Gateway (véase Figura 4.25).\par
+A continuación se describe el funcionamiento de cada Lambda:\par
 \begin{itemize}
-	\item\textbf{Login}.- Encargada de toda la lógica y la seguridad informática relacionada con la autenticación en la aplicación.
-	\item\textbf{Registrar cuenta}.- Permitirá registrar una nueva cuenta en el sistema, misma que permitirá guardar escenarios.
-	\item\textbf{Recuperar cuenta}.- En caso de que se olvide la contraseña de la cuenta, ésta Lambda contendrá la lógica para recuperar la cuenta
-	\item\textbf{Guardar escenario}.- Permitirá almacenar las imágenes que sean enviadas. Estas imágenes serán almacenadas en un bucket de S3 y asociadas a un escenario. Esta información será almacenada en la base de datos de MySQL que está montada sobre el cluster de RDS.
-	\item\textbf{Ver escenario}.- Ësta Lambda permitirá recuperar la información e imágenes de un escenario especificado, con el fin de poder visualizarlo desde la ubicación.
+	\item\textbf{ARFLogin}. Contiene toda la lógica y la seguridad informática relacionada con la autenticación en la aplicación.
+	\item\textbf{ARFRegister}. Permitirá registrar una nueva cuenta en el sistema, misma que permitirá guardar proyectos y escenarios.
+	\item\textbf{ARFRecoverAccount}. Esta Lambda contendrá la lógica para poder reestablecer la contraseña de una cuenta, para el caso en el que un usuario olvide su contraseña.
+	\item\textbf{ARFProject}. Contiene la lógica para poder crear, obtener, actualizar y eliminar proyectos.
+	\item\textbf{ARFAssets}. Contiene la lógica para poder crear, obtener, actualizar y eliminar muebles incluyendo los modelos 3D de los mismos.
+	\item\textbf{ARFGetScenario}. Permite obtener un escenario específico o los escenarios de un usuario en particular.
+	\item\textbf{ARFStoreScenario}. Esta función se encarga de guardar los escenarios generados en la aplicación, incluyendo sus fotografías. Los videos no son manipulados por esta Lambda puesto que se almacenarán localmente en los dispositivos móviles, debido a su gran tamaño lo cual implica un largo tiempo de subida a la nube.
+	\item\textbf{ARFUpdateScenario}. Contiene la lógica para poder actualizar la información general de los escenarios. También se encarga de eliminar fotografías de los escenarios, pero no agregar nuevas, debido a que las fotografías se generan únicamente durante la creación de un escenario.
+	\item\textbf{ARFDeleteScenario}. Permite eliminar escenarios previamente creados.
 \end{itemize}
 \noindent
-La aplicación podrá comunicarse a toda la infraestructura de AWS por medio de la API Gateway, que sirve como puerta de enlace tanto para entrar como para salir de AWS. Ésta comunicación se realizará a través del protocolo HTTPS, dada la facilidad de uso que proporciona, además de la capa de seguridad SSL que ya proporciona AWS durante la comunicación con la API Gateway. En la figura 4.25 puede observarse un diagrama de arquitectura del sistema.
+Las Lambdas por sí solas sólo pueden comunicarse entre la misma infraestructura de AWS, pero no al exterior, para ello se requiere el servicio API Gateway que permite que las Lambdas puedan tener comunicación con el mundo exterior a través del protocolo HTTPS. Funciona de la siguiente manera:
+\begin{itemize}
+	\item Se envía una petición a una URL de consumo de la API Gateway con un cuerpo de mensaje en formato JSON.
+	\item La API Gateway se encarga de enviar el mensaje a una Lambda, dependiendo de la URL de consumo que fue empleada.
+	\item La API Gateway se queda esperando a que la Lambda termine de ejcutarse.
+	\item La Lambda recibe el mensaje en formato JSON y se ejecuta. Dependiendo de lo que esté programado en la función, puede conectarse a S3 o a una instancia de MySQL. Cuando finaliza su ejecución, devuelve una respuesta a la API Gateway.
+	\item La API Gateway recibe esta respuesta y se encarga de devolverla al cliente que realizó la petición.
+\end{itemize}
+
+De esta forma la app puede comunicarse con AWS y obtener los recursos que necesite para realizar sus funciones.\par
+Además de la aplicación móvil, existe una plataforma web que se encuentra como app de Google Firebase. El objetivo de esta plataforma es que los usuarios registrados puedan entrar a su cuenta y agregar muebles (incluyendo sus modelos 3D) los cuales podrán ser usados en la aplicación, de tal forma que si algún diseñador de interiores desea visualizar un mueble especifico en el entorno de realidad aumentada, pueda agregarlo desde la plataforma web de ARF. Dentro de la misma plataforma será posible visualizar los modelos 3D.
+
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm,height=15cm]{imagenes/desarrollo/arquitectura/ArchitecturaBackend.png}
@@ -45,7 +61,7 @@ La aplicación podrá comunicarse a toda la infraestructura de AWS por medio de 
 Por otro lado se requerirá una base de datos que pueda almacenar los usuarios registrados y los escenarios que estos vayan creando. Para el tipo y cantidad de información que se requiere almacenar, una base de datos relacional cumple a ésta necesidad. En la figura  3.16 describe el diseño de la base de datos que se va a usar en ARF, misma que se encuentra en el clúster Amazon RDS mostrado en la figura 4.26.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=10cm,height=7cm]{imagenes/desarrollo/arquitectura/ERD.png}
+	\includegraphics[width=16cm,height=9.5cm]{imagenes/desarrollo/arquitectura/ERD.png}
 	\caption{Modelo Entidad-Relación usado para la base de datos de ARF.}
-	\label{fig:arqbackend}
+	\label{fig:erd}
 \end{figure}
