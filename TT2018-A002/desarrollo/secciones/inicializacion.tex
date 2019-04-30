@@ -58,10 +58,22 @@ Además de la aplicación móvil, existe una plataforma web que se encuentra com
 	\label{fig:arqbackend}
 \end{figure}
 \par
-Por otro lado se requerirá una base de datos que pueda almacenar los usuarios registrados y los escenarios que estos vayan creando. Para el tipo y cantidad de información que se requiere almacenar, una base de datos relacional cumple a ésta necesidad. En la figura  3.16 describe el diseño de la base de datos que se va a usar en ARF, misma que se encuentra en el clúster Amazon RDS mostrado en la figura 4.26.
+Por otro lado se requerirá una base de datos que pueda almacenar los usuarios, proyectos, escenarios, categorías y subcategorías que se vayan generando. Para el tipo y cantidad de información que se requiere almacenar, una base de datos relacional en tercera forma normal cumple a ésta necesidad. En las figuras  3.16, 3.17 y 3.18 se muestra el proceso de normalización la base de datos que se va a usar en ARF, misma que se encuentra en Amazon RDS mostrado en la figura 4.26.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=16cm,height=9.5cm]{imagenes/desarrollo/arquitectura/ERD.png}
-	\caption{Modelo Entidad-Relación usado para la base de datos de ARF.}
-	\label{fig:erd}
+	\includegraphics[width=16cm,height=8cm]{imagenes/desarrollo/arquitectura/ERD.png}
+	\caption{Primera forma normal de la base de datos de ARF.}
+	\label{fig:erd1}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=16cm,height=8cm]{imagenes/desarrollo/arquitectura/ERD.png}
+\caption{Segunda forma normal de la base de datos de ARF.}
+\label{fig:erd2}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=16cm,height=8cm]{imagenes/desarrollo/arquitectura/ERD.png}
+\caption{Tercera forma normal de la base de datos de ARF.}
+\label{fig:erd}
 \end{figure}
