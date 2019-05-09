@@ -24,8 +24,8 @@ En ésta fase se describirá la linea base sobre la que se desarrollará el proy
 \end{itemize}
 \noindent
 \textbf{Arquitectura}:
-El backend de la aplicación se encontrará sobre la infraestructura de Amazon Web Services (AWS), debido a la alta escalabilidad que proporciona. La arquitectura contendrá un cluster RDS con MySQL, nueve Lambdas, un Bucket de S3 y una API Gateway (véase Figura 4.25).\par
-A continuación se describe el funcionamiento de cada Lambda:\par
+El backend de la aplicación se encontrará sobre la infraestructura de Amazon Web Services (AWS), debido a la alta escalabilidad que proporciona. La arquitectura contendrá un cluster RDS con MySQL, ocho Lambdas, un Bucket de S3, una instancia de EC2 y una API Gateway (véase Figura 4.25).\par
+A continuación se describe el funcionamiento de cada función:\par
 \begin{itemize}
 	\item\textbf{ARFLogin}. Contiene toda la lógica y la seguridad informática relacionada con la autenticación en la aplicación.
 	\item\textbf{ARFRegister}. Permitirá registrar una nueva cuenta en el sistema, misma que permitirá guardar proyectos y escenarios.
@@ -33,7 +33,7 @@ A continuación se describe el funcionamiento de cada Lambda:\par
 	\item\textbf{ARFProject}. Contiene la lógica para poder crear, obtener, actualizar y eliminar proyectos.
 	\item\textbf{ARFAssets}. Contiene la lógica para poder crear, obtener, actualizar y eliminar muebles incluyendo los modelos 3D de los mismos.
 	\item\textbf{ARFGetScenario}. Permite obtener un escenario específico o los escenarios de un usuario en particular.
-	\item\textbf{ARFStoreScenario}. Esta función se encarga de guardar los escenarios generados en la aplicación, incluyendo sus fotografías. Los videos no son manipulados por esta Lambda puesto que se almacenarán localmente en los dispositivos móviles, debido a su gran tamaño lo cual implica un largo tiempo de subida a la nube.
+	\item\textbf{ARFStoreScenario}. Esta función se encarga de guardar los escenarios generados en la aplicación, incluyendo sus fotografías. Los videos no son manipulados por esta Lambda puesto que se almacenarán localmente en los dispositivos móviles, debido a su gran tamaño lo cual implica un largo tiempo de subida a la nube. Esta función no se encuentra dentro de una Lambda debido a la limitante de tamaño en las peticiones que ofrece. Una petición a una Lambda debe ser menor a 10 MB, y al estar recibiendo una gran cantidad de fotografías, esto representa un problema, por lo que se decidió montar esta función en un servidor de NodeJS dentro de una instancia de EC2 con linux para eliminar este obstáculo.
 	\item\textbf{ARFUpdateScenario}. Contiene la lógica para poder actualizar la información general de los escenarios. También se encarga de eliminar fotografías de los escenarios, pero no agregar nuevas, debido a que las fotografías se generan únicamente durante la creación de un escenario.
 	\item\textbf{ARFDeleteScenario}. Permite eliminar escenarios previamente creados.
 \end{itemize}
