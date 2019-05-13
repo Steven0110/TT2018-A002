@@ -13,56 +13,95 @@ Una vez creado un proyecto, el usuario puede generar escenarios dentro de este, 
 	\item Utilidad de la cotización
 \end{itemize}
 
-En la pantalla de visualización de proyecto, el usuario puede seleccionar la opción \textbf{ver escenarios} la cual mostrará en pantalla el listado de escenarios que hay en ese proyecto (ver figura x.xx). Cada escenario se muestra con una de las imagenes que contiene (ver figura x.xx). Al seleccionar un escenario se mostrarán las imagenes que lo conforman y al seleccionar una, se mostrará en pantalla completa (ver figura x.xx). De igual forma, el usuario podrá empezar a generar nuevos escenarios, siguiendo el siguiente proceso:
+En la pantalla de visualización de proyecto, el usuario puede seleccionar la opción \textbf{ver escenarios} la cual mostrará en pantalla el listado de escenarios que hay en ese proyecto y cada escenario se muestra con una de las imagenes que contiene (ver figura x.xx). Al seleccionar un escenario se mostrarán las imagenes que lo conforman y al seleccionar una, se mostrará en pantalla completa (ver figura x.xx). 
+
+\begin{figure}[hbt!]
+	\begin{minipage}{0.32\textwidth}
+		\centering
+		\includegraphics[width=4cm,height=7cm]{imagenes/desarrollo/app/scenarios.png}
+		\caption{Visualización de escenarios}
+		\label{fig:readscenarios}
+	\end{minipage}\hfill
+	\begin{minipage}{0.32\textwidth}
+		\centering
+		\includegraphics[width=4cm,height=7cm]{imagenes/desarrollo/app/scenarios_img.png}
+		\caption{Imágenes de escenario}
+		\label{fig:scenarioimgs}
+	\end{minipage}\hfill
+	\begin{minipage}{0.32\textwidth}
+		\centering
+		\includegraphics[width=4cm,height=7cm]{imagenes/desarrollo/app/scenario_pic.png}
+		\caption{Imágen individual de ecenario}
+		\label{fig:scimg}
+	\end{minipage}\hfill
+\end{figure}
+
+\clearpage
+
+De igual forma, el usuario podrá empezar a generar nuevos escenarios, siguiendo el siguiente proceso:
 \begin{itemize}
 	\item El usuario selecciona la opción para agregar un nuevo escenario al proyecto
 	\item Se muestra un formulario con la información general del escenario, mismo que deberá ser llenado (ver figura x.xx).
-	\item Cuando se llene el formulario, el usuario podrá acceder a la cámara para poder tomar las fotos que desee para conformar el escenario (ver figura x.xx). Dentro de la cámara el usuario podrá: agregar muebles a escena, cambiar de posición muebles agregados, eliminar muebles de escena, visualizar los precios de los muebles y tomar fotografías.
+	\item Cuando se llene el formulario, el usuario podrá acceder a la cámara para poder tomar las fotos que desee para conformar el escenario (ver figura x.xx). Dentro de la cámara el usuario podrá: agregar muebles a escena, cambiar de posición muebles agregados, eliminar muebles de escena y tomar fotografías.
 	\item Al finalizar el escenario, el usuario selecciona la opción \textbf{Guardar} y la aplicación mostrará una cuadrícula con las imágenes tomadas (ver figura x.xx).
 	\item También habrá una opción \textbf{Ver cotización} misma que mostrará un subtotal con los precios de los muebles más la utilidad si es que se definió al crear el escenario, el IVA de este subtotal y la suma total de estos valores (ver figura x.xx).
 \end{itemize}
 
-Esta funcionalidad cumple tres procesos de negocios, correspondientes a las funciones de creación, lectura y actualización de escenarios (ver figuras x.xx, x.xx y x.xx)
+
+\begin{figure}[hbt!]
+	\begin{minipage}{0.32\textwidth}
+		\centering
+		\includegraphics[width=4cm,height=8cm]{imagenes/desarrollo/app/presave_scenario.png}
+		\caption{Formulario de información general de escenario}
+		\label{fig:infosc}
+	\end{minipage}\hfill
+	\begin{minipage}{0.32\textwidth}
+		\centering
+		\includegraphics[width=4cm,height=8cm]{imagenes/desarrollo/app/camera01.png}
+		\caption{Cámara de la aplicación}
+		\label{fig:camera01}
+	\end{minipage}\hfill
+	\begin{minipage}{0.32\textwidth}
+		\centering
+		\includegraphics[width=4cm,height=8cm]{imagenes/desarrollo/app/camera01.png}
+		\caption{Imagen individual de ecenario}
+		\label{fig:scimg}
+	\end{minipage}\hfill
+\end{figure}
+
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=15cm,height=9cm]{imagenes/desarrollo/diagramas/BPMN_LOGIN.png}
-	\caption{Diagrama de proceso de recuperación de contraseña.}
+	\includegraphics[width=4cm,height=8cm]{imagenes/desarrollo/app/camera01.png}
+	\caption{Imagen individual de ecenario}
 	\label{fig:recover}
+\end{figure}
+
+Esta funcionalidad cumple tres procesos de negocios, correspondientes a las funciones de creación, lectura y eliminación de escenarios (ver figuras x.xx, x.xx, x.xx y x.xx)
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=18cm,height=6cm]{imagenes/desarrollo/diagramas/BPMN_CREATE_SCENARIO.jpg}
+	\caption{Diagrama de proceso de creación de escenario.}
+	\label{fig:createsc}
 \end{figure}
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=15cm,height=9cm]{imagenes/desarrollo/diagramas/BPMN_LOGIN.png}
-	\caption{Diagrama de proceso de recuperación de contraseña.}
-	\label{fig:recover}
+	\includegraphics[width=18cm,height=4cm]{imagenes/desarrollo/diagramas/BPMN_BUILD_SCENARIO.jpg}
+	\caption{Diagrama de subproceso de construcción de escenario.}
+	\label{fig:buildsc}
 \end{figure}
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=15cm,height=9cm]{imagenes/desarrollo/diagramas/BPMN_LOGIN.png}
-	\caption{Diagrama de proceso de recuperación de contraseña.}
-	\label{fig:recover}
+	\includegraphics[width=17cm,height=8cm]{imagenes/desarrollo/diagramas/BPMN_READ_SCENARIOS.jpg}
+	\caption{Diagrama de proceso de lectura de escenarios.}
+	\label{fig:readsc}
 \end{figure}
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=15cm,height=9cm]{imagenes/desarrollo/diagramas/BPMN_LOGIN.png}
-	\caption{Diagrama de proceso de recuperación de contraseña.}
-	\label{fig:recover}
+	\includegraphics[width=17cm,height=9cm]{imagenes/desarrollo/diagramas/BPMN_DELETE_SCENARIOS.jpg}
+	\caption{Diagrama de proceso de eliminación de escenario.}
+	\label{fig:deletesc}
 \end{figure}
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=15cm,height=9cm]{imagenes/desarrollo/diagramas/BPMN_LOGIN.png}
-	\caption{Diagrama de proceso de recuperación de contraseña.}
-	\label{fig:recover}
-\end{figure}
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=15cm,height=9cm]{imagenes/desarrollo/diagramas/BPMN_LOGIN.png}
-	\caption{Diagrama de proceso de recuperación de contraseña.}
-	\label{fig:recover}
-\end{figure}
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=15cm,height=9cm]{imagenes/desarrollo/diagramas/BPMN_LOGIN.png}
-	\caption{Diagrama de proceso de recuperación de contraseña.}
-	\label{fig:recover}
-\end{figure}
+
+\clearpage

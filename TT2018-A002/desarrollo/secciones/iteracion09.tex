@@ -1,6 +1,37 @@
 \section{Iteración IX}
 \subsection{Resumen}
-Esta iteración es la integración de lo desarrollado en la iteración VIII (gestión de muebles y categorías en plataforma) a la iteración VII (gestión de escenarios).
+Esta iteración es la integración de lo desarrollado en la iteración VIII (gestión de muebles y categorías en plataforma) a la iteración VII (gestión de escenarios). Además se hicieron mejoras en la usabilidad de la aplicación.
 
 \subsection{Desarrollo}
-En la iteración VII usamos modelos y categorías estáticos para realizar las pruebas de funcionalidad. Teniendo los muebles ya almacenados en la plataforma web, desarrollamos un proceso para poder obtener los muebles subidos previamente, mostrarlos en el menú de muebles de forma dinámica, y que estos puedan ser agregados a los escenarios.
+En la iteración VII usamos modelos y categorías estáticos para realizar las pruebas de funcionalidad.\par
+Las categorías y subcategorías gestionadas por el usuario en la plataforma web se muestran én el menú de muebles (ver figura x.xx). Asimismo teniendo los muebles ya almacenados en la plataforma web en la iteración anterior, desarrollamos un proceso para poder obtener de AWS S3 (lugar donde se encuentran almacenados todos los modelos subidos) los muebles subidos previamente y su imagen para mostrarlos en el menú de muebles de forma dinámica (ver figura x.xx), de tal forma que estos puedan ser utilizados en la construcción de escenarios (ver figura x.xx).
+
+
+\begin{figure}[h!]
+	\begin{minipage}{0.32\textwidth}
+		\centering
+		\includegraphics[width=4cm,height=8cm]{imagenes/desarrollo/app/scenarios.png}
+		\caption{Categorías y subcategorías dinámicas del usuario.}
+		\label{fig:appmenucat}
+	\end{minipage}\hfill
+	\begin{minipage}{0.32\textwidth}
+		\centering
+		\includegraphics[width=4cm,height=8cm]{imagenes/desarrollo/app/scenarios.png}
+		\caption{Menú de muebles}
+		\label{fig:appmenu}
+	\end{minipage}\hfill
+	\begin{minipage}{0.32\textwidth}
+		\centering
+		\includegraphics[width=4cm,height=8cm]{imagenes/desarrollo/app/scenarios.png}
+		\caption{Mueble subido previamente agregado a escena.}
+		\label{fig:appfurn}
+	\end{minipage}\hfill
+\end{figure}
+
+Las mejoras de usabilidad de la aplicación realizadas fueron las siguientes:
+\begin{itemize}
+	\item Cuando un mueble es seleccionado se muestra una marca debajo de él para identificarlo
+	\item La pantalla de cámara óptamos por definirla en modo horizontal para que mostrara un mejor panorama de la escena.
+	\item Cambiamos el aspecto de la barra de navegación de la aplicación a un diseño minimalista.
+	\item Para posicionar un mueble tras seleccionarlo del menú omitimos el punto de referencia, en su lugar el usuario debe tocar la pantalla en el lugar donde desee posicionar el mueble.
+\end{itemize}
