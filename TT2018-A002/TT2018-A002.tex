@@ -9,12 +9,21 @@
 \usepackage[table,xcdraw]{xcolor}
 \usepackage[utf8]{inputenc}
 \usepackage [margin=1in,includefoot]{geometry}
+\usepackage[nottoc]{tocbibind}
 %\usepackage{colortbl}
 \usepackage{array,booktabs,xcolor}  %arydshln,multirow
 \usepackage{caption}
 \usepackage{multirow}
 \usepackage{enumerate}
-\usepackage{float} 
+\usepackage{float}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=gray,
+    linkcolor=black,
+    urlcolor=black
+}
 \newcommand\VRule[1][\arrayrulewidth]{\vrule width #1}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -29,7 +38,7 @@
     \renewcommand{\tablename}{Tabla} %Escribe Tabla en lugar de Cuadro
     \renewcommand{\listtablename}{\'Indice de tablas} %Escribe Indeice de tablas en lugar de Indice de cuadros
     \renewcommand{\chaptername}{Capítulo}
-    \renewcommand{\abstractname}{Resúmen}
+    \renewcommand{\abstractname}{Resumen}
     \renewcommand*{\contentsname}{Contenido}
     \renewcommand\listfigurename{Lista de figuras}
 
