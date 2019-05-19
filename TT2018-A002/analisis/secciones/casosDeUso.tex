@@ -1,20 +1,20 @@
 
 \newpage
 \section{Casos de uso}
-El la siguiente sección se definen y describen los actores, funciones y escenarios, explicando su funcionalidad e interacción con la aplicación.\par
+En esta sección se definen y describen los actores, funciones y escenarios, explicando su funcionalidad e interacción con la aplicación.\par
 \vspace{5mm}
-\begin{figure}[h!]
+\begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=17cm,height=9cm]{imagenes/analisis/cu/cu_complete.jpg}
+	\includegraphics[width=17cm,height=9cm]{imagenes/analisis/cu/cu_complete.png}
 	\caption{Casos de uso.}
 	\label{fig:casosdeuso}
 \end{figure}  
 \newpage
 
 \subsection{CU0. Generalización de actores}\par
-Tendremos dos actores a los cuales está destinada la aplicación: diseñadores de interiores y habitantes comunes de inmuebles, ambos tendrán las mismas funcionalidades a su alcance y lo que los diferenciará dentro de la aplicación será el interés que cada usuario tenga en tales funciones, \textit{v.g. el diseñador de interiores tendrá mayor interés en almacenar proyectos y escenarios que el habitante común de un inmueble}, por lo que se considerará una generalización de ambos actores a un usuario general.
+Tendremos dos actores para los cuales está destinada la aplicación: diseñadores de interiores y habitantes comunes de inmuebles, ambos tendrán las mismas funcionalidades a su alcance y lo que los diferenciará dentro de la aplicación será el interés que cada usuario tenga en tales funciones, \textit{v.g. el diseñador de interiores tendrá mayor interés en almacenar proyectos y escenarios que el habitante común de un inmueble}, por lo que se considerará una generalización de ambos actores a un usuario general.
 
-\begin{figure}[h!]
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=8cm,height=5cm]{imagenes/analisis/cu/generalizacion.jpg}
 	\caption{CU0. Generalización de actores.}
@@ -32,7 +32,7 @@ Es el escenario de autenticación y acceso de usuario a la aplicación.
 	\item Si encuentra una coincidencia, se muestra el menú principal donde el usuario puede visualizar sus escenarios y proyectos. Si no se encuentra una coincidencia, se muestra un mensaje en pantalla diciendo que los datos ingresados son incorrectos, y la pantalla mostrada seguirá siendo el Login mientras la autenticación no sea exitosa.
 \end{itemize}
 
-\begin{figure}[h!]
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=8cm,height=4cm]{imagenes/analisis/cu/iniciar_sesion.jpg}
 	\caption{CU1. Inicio de sesión.}
@@ -42,15 +42,15 @@ Es el escenario de autenticación y acceso de usuario a la aplicación.
 \subsection{CU2. Registrar cuenta} \par
 Es el escenario donde un usuario registra una nueva cuenta para poder tener acceso al sistema.
 \begin{itemize}
-	\item En la pantalla inicial, el usuario selecciona el botón ``Registrar".
-	\item Se mostrará una pantalla con un pequeño formulario donde el usuario ingresará sus datos como son: nombre, email y contraseña. La contraseña debe cumplir con la BR2. También habrá un campo adicional donde deberá introducir de nuevo la contraseña para verificar que el usuario la escribió como la pensó inicialmente.
-	\item Tras haber llenado esos campos el usuario selecciona el botón ``Registrar cuenta".
+	\item En la pantalla inicial, el usuario selecciona el botón ``Registro".
+	\item Se mostrará una pantalla con un pequeño formulario donde el usuario ingresará sus datos como son: nombre, email y contraseña. La contraseña debe cumplir con la regla de negocio BR2. También habrá un campo adicional donde deberá introducir de nuevo la contraseña para verificar que el usuario la escribió como la pensó inicialmente.
+	\item Tras haber llenado esos campos el usuario selecciona el botón ``Registrar".
 	\item Si hay algún error en el formulario (por ejemplo, el email no tiene la sintaxis que debe tener un email o la contraseña no cumple con la regla de negocio BR2) se mostrará en pantalla a través de un mensaje.
 	\item De ser exitoso el proceso anterior, el sistema consulta la base de datos para verificar que se cumpla la regla de negocio BR1. Si no se cumple, un mensaje en pantalla es msotrado diciendo que el correo ya ha sido registrado en otra cuenta. Si es cumplida, el sistema genera un registro de usuario con los datos ingresados.
 	\item El sistema muestra en pantalla un mensaje diciendo que el usuario fue creado con éxito y la pantalla mostrada cambia a la inicial donde el usuario puede iniciar sesión con los datos de la cuenta que acaba de crear.
 \end{itemize}
 
-\begin{figure}[h!]
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=8cm,height=4cm]{imagenes/analisis/cu/registrar_cuenta.jpg}
 	\caption{CU2. Registro de cuenta.}
@@ -61,23 +61,23 @@ Es el escenario donde un usuario registra una nueva cuenta para poder tener acce
 \subsection{CU3. Recuperar cuenta}  \par
 Es el escenario donde un usuario recupera el acceso a una cuenta de la cual olvidó su contraseña
 \begin{itemize}
-	\item En la pantalla inicial el usuario selecciona el botón ``Olvidé mi contraseña".
+	\item En la pantalla de login el usuario selecciona la opción ``¿Olvidaste tu contraseña?".
 	\item El sistema muestra la pantalla de recuperación de cuenta donde hay un campo donde el usuario debe ingresar el correo con el que registró la cuenta.
-	\item El usuario selecciona el botón ``Enviar código de recuperación".
+	\item El usuario selecciona el botón ``Enviar".
 	\item El sistema verifica que el correo ingresado tenga una estructura correcta. De haber un error en la entrada el sistema lo muestra en un mensaje.
 	\item Si la validación es correcta el sistema envía un correo al email ingresado el cual contiene un código de recuperación.
 	\item El sistema muestra una pantalla que contiene otro campo donde el usuario debe introducir el código de verificación enviado al correo.
-	\item El usuario selecciona el botón ``Verificar código".
+	\item El usuario selecciona el botón ``Enviar".
 	\item El sistema verifica que el valor ingresado contenga sólo números. De haber un error en la entrada el sistema lo muestra en un mensaje.
 	\item Tras la verificación anterior exitosa, el sistema verifica que el código ingresado sea el mismo que se generó y envío al correo. De ser incorrecto el sistema lo notifica en pantalla a través de un correo.
 	\item Si el código ingresado coincide, entonces el sistema muestra una pantalla que tiene dos campos para contraseña. En el primer campo el usuario debe introducir una nueva contraseña, la cual debe cumplir con la regla de negocio BR2. En el segundo campo debe volver a escribir la misma contraseña.
-	\item El usuario selecciona el botón ``Actualizar contraseña"
+	\item El usuario selecciona nuevamente el botón ``Enviar"
 	\item El sistema valida que la contraseña cumpla con la regla de negocio BR2, de no ser así, lo notifica en pantalla a través de un mensaje.
 	\item El sistema cambia la contraseña del usuario por la que acaba de ingresar. Tras esto la pantalla muestra un mensaje diciendo si la actualización fue exitosa o no.
 	\item De ser exitosa, la pantalla mostrada vuelve a ser la del Login inicial donde el usuario podrá iniciar sesión con su correo y la nueva contraseña.
 \end{itemize}
 
-\begin{figure}[h!]
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=8cm,height=4cm]{imagenes/analisis/cu/recuperar_cuenta.jpg}
 	\caption{CU3. Recuperar cuenta.}
@@ -88,16 +88,16 @@ Es el escenario donde un usuario recupera el acceso a una cuenta de la cual olvi
 Es el escenario donde un usuario crea un proyecto para poder guardar escenarios dentro de él.\par
 \textbf{Precondición:} Haber iniciado sesión correctamente.\par
 \begin{itemize}
-	\item Dentro del menú principal, el usuario selecciona la opción ``Crear proyecto".
+	\item Dentro del menú principal, el usuario selecciona la opción de agregar proyecto en la barra superior.
 	\item El sistema muestra un formulario donde muestra campos para introducir los siguientes datos: nombre de cliente y observaciones generales del mismo.
-	\item El usuario selecciona el botón ``Crear proyecto".
+	\item El usuario selecciona el botón ``Agregar".
 	\item El sistema verifica que los campos introducidos contengan solamente números, letras y caracteres especiales. De no ser así, el sistema lo notifica en pantalla a través de un mensaje.
 	\item El sistema registra en la base de datos un proyecto y lo asocia al usuario que solicita su creación.
 	\item El sistema muestra en pantalla un mensaje diciendo si la creación del proyecto fue exitosa o no.
-	\item De ser correcta la creación del proyecto, la pantalla mostrada vuelve a ser el menú principal, donde el usuario podrá ver el proyecto creado selecciona el botón ``Ver proyectos"
+	\item De ser correcta la creación del proyecto, la pantalla mostrada vuelve a ser el menú principal mostrando el proyecto creado.
 \end{itemize}
 
-\begin{figure}[h!]
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=8cm,height=4cm]{imagenes/analisis/cu/crear_proyecto.jpg}
 	\caption{CU4. Crear proyecto.}
@@ -109,17 +109,13 @@ Es el escenario donde un usuario crea un proyecto para poder guardar escenarios 
 Es el escenario donde un usuario registrado puede ver los proyectos que ha creado con la aplicación.\par
 \textbf{Precondición:} Haber iniciado sesión correctamente.\par
 \begin{itemize}
-	\item En el menú principal, el usuario selecciona el botón ``Ver proyectos".
-	\item El sistema muestra una pantalla donde se ve una lista con los nombres de los proyectos creados.
-	\item El usuario selecciona alguno de los proyectos listados.
+	\item En el menú principal, el usuario selecciona alguno de los proyectos listados.
 	\item El sistema muestra la pantalla de visualización de proyecto que contiene una rejilla donde se visualizan los escenarios del proyecto en recuadros. Cada recuadro muestra una miniatura de la primer foto de cada escenario, y debajo de ella el nombre del mismo.
-	\item El usuario selecciona la opción ``Ver información" situada en la esquina superior derecha.
-	\item El sistema muestra una pantalla con un pequeño formulario donde se muestran los datos: nombre del cliente, observaciones generales del proyecto.
-	\item El usuario selecciona la opción ``Regresar" situada en la esquina superior derecha.
-	\item El sistema vuelve a mostrar la pantalla de visualización de proyecto.
+	\item El usuario selecciona la opción de regresar situada en la esquina superior derecha.
+	\item El sistema regresa al menú principal.
 \end{itemize}
 
-\begin{figure}[h!]
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=8cm,height=4cm]{imagenes/analisis/cu/ver_proyectos.jpg}
 	\caption{CU5. Ver proyecto}
@@ -133,15 +129,15 @@ Es el escenario donde un usuario registrado puede ver los escenarios que ha crea
 	\item En la pantalla de visualización de proyecto el usuario selecciona el recuadro del escenario que desea ver.
 	\item La pantalla muestra una rejilla donde se ven todas las fotos en miniatura del escenario.
 	\item El usuario selecciona alguna de las fotos, y en pantalla la imagen se muestra en tamaño completo.
-	\item El usuario selecciona el icono ``X" para cerrar la visualización de la imagen y poder escoger otras fotos de la rejilla.
-	\item El usuario selecciona la opción ``Ver información" situada en la esquina superior derecha.
+	\item El usuario selecciona el botón de regresar para cerrar la visualización de la imagen y poder escoger otras fotos de la rejilla.
+	\item El usuario selecciona la opción de edición situada en la barra de navegación superior.
 	\item La pantalla muestra un formulario donde se visualizan los datos generales del escenario que se registraron cuando fue creado, como son: tipo de habitación, presupuesto definido, presupuesto final, una lista de los objetos decorativos que se emplearon en la creación del escenario y una descripción general del mismo.
-	\item Si lo desea, el usuario puede modificar algún campo de los modificables (tipo de habiración, presupuesto definido o descripción general) y al seleccionar la opción ``Guardar" situada debajo del formulario, el sistema actualiza los datos en la base de datos.
-	\item El usuario selecciona la opción ``Regresar" situada en la esquina superior derecha.
+	\item Si lo desea, el usuario puede modificar algún campo de los modificables (tipo de habitación, presupuesto definido o descripción general) y al seleccionar la opción ``Modificar" situada debajo del formulario, el sistema actualiza los datos en la base de datos.
+	\item El usuario selecciona la opción de regresar situada en la esquina superior derecha.
 	\item El sistema vuelve a mostrar la pantalla de visualización de escenario.
 \end{itemize}
 
-\begin{figure}[h!]
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=8cm,height=4cm]{imagenes/analisis/cu/ver_escenarios.jpg}
 	\caption{CU6. Ver escenario.}
@@ -154,11 +150,11 @@ Es el escenario donde un usuario registrado puede agregar un mueble.\par
 \begin{itemize}
 	\item El usuario enfoca la cámara a una superficie y la mueve ligeramente hasta que aparezca una malla de puntos blancos sobre la misma.
 	\item El usuario selecciona un mueble del catálogo (Ver CU8 ``Visualizar catálogo").
-	\item El menú de muebles se oculta, mostrando en pantalla la cámara con un botón ``Colocar" y un punto de referencia de color verde en el centro.
-	\item El usuario selecciona el botón ``Colocar" y el mueble seleccionado aparece en el escenario de la cámara justo donde se encontraba el punto de referencia
+	\item El menú de muebles se oculta, mostrando la pantalla de cámara.
+	\item El usuario selecciona en algún lugar de la pantalla y el mueble seleccionado aparecerá ahí.
 \end{itemize}
 
-\begin{figure}[h!]
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=8cm,height=4cm]{imagenes/analisis/cu/agregar_mueble.jpg}
 	\caption{CU7. Agregar mueble a escena.}
@@ -169,15 +165,15 @@ Es el escenario donde un usuario registrado puede agregar un mueble.\par
 Es el escenario donde un usuario registrado puede visualizar el catálogo de muebles para agregarlos a la escena.\par
 \textbf{Precondición:} Haber iniciado sesión correctamente y estar en la pantalla de cámara.\par
 \begin{itemize}
-	\item El usuario selecciona la opción ``Catálogo" de la esquina superior derecha.
-	\item Sobre la pantalla se despliega un listado que contiene los tipos de habitaciones.
+	\item El usuario selecciona la opción de catálogo de la barra de navegación superior.
+	\item Sobre la pantalla se despliega un listado que contiene las categorías del usuario.
 	\item El usuario selecciona una opción del listado.
-	\item Sobre la pantalla se despliega una segunda sección al lado del listado anterior, que contiene también un listado. Dentro de esta lista se ubican los tamaños de habitaciones: ``Grande, mediana y chica".
+	\item Debajo de la categoría seleccionada se depliega un segundo listado con las subcategorías del usuario pertenecientes a tal categoría.
 	\item El usuario selecciona una opción del listado.
-	\item El sistema despliega un tercer listado al lado del anterior, el cual contiene miniaturas de los muebles que pertenecen al tipo y tamaño de habitación seleccionados.
+	\item En pantalla se muestra un cuadro con una rejilla que contiene los muebles dentro de la categoría y subcategoría seleccionados. Esta rejilla se compone de una miniatura del mueble, que el usuario adjuntó al subir el mueble en la plataforma web.
 \end{itemize}
 
-\begin{figure}[h!]
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=8cm,height=4cm]{imagenes/analisis/cu/visualizar_catalogo.jpg}
 	\caption{CU8. Visualizar catálogo.}
@@ -189,43 +185,18 @@ Es el escenario donde un usuario registrado borra un mueble anteriormente coloca
 \textbf{Precondición:} Haber iniciado sesión correctamente, estar en la pantalla de cámara y haber agregado al menos un mueble a la escena.\par
 \begin{itemize}
 	\item El usuario selecciona un mueble previamente colocado en escena.
-	\item El mueble cambia ligeramente de color para resaltarse de los demás.
-	\item En pantalla aparece la opción ``Eliminar".
-	\item El usuario selecciona la opción ``Eliminar".
+	\item Debajo del mueble aparece una marca y encima de el, un botón para eliminarlo.
+	\item El usuario selecciona el botón de eliminar.
 	\item El mueble seleccionado desaparece de la vista.
 \end{itemize}
 
-\begin{figure}[h!]
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=8cm,height=4cm]{imagenes/analisis/cu/borrar_mueble.jpg}
 	\caption{CU9. Borrar mueble de escena.}
 	\label{fig:borrarmueble}
-\end{figure} 
-
-
-\subsection{CU10. Cambiar color de mueble agregado}\par
-Es el escenario donde un usuario registrado cambia el color de ub mueble anteriormente colocado.\par
-\textbf{Precondición:} Haber iniciado sesión correctamente, estar en la pantalla de cámara y haber agregado al menos un mueble a la escena.\par
-\begin{itemize}
-	\item El usuario selecciona un mueble previamente colocado en escena.
-	\item El mueble cambia ligeramente de color para resaltarse de los demás.
-	\item En pantalla aparece la opción ``Cambiar color".
-	\item El usuario selecciona la opción ``Cambiar color".
-	\item El sistema muestra en una esquina de la pantalla una paleta de colores.
-	\item El usuario selecciona de la paleta el color que desee que tenga el mueble.
-	\item Conforme el usuario va seleccionando colores, el mueble cambia de color.
-	\item El usuario selecciona el icono ``X" de la paleta para cerrarla.
-	\item El usuario selecciona el botón ``Cerrar" para retirar los botones ``Eliminar" y ``Cambiar color" de la pantalla
-\end{itemize}
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=8cm,height=4cm]{imagenes/analisis/cu/cambiar_color.jpg}
-	\caption{CU10. Cambiar color de mueble agregado.}
-	\label{fig:cambiarcolor}
-\end{figure} 
-
-\subsection{CU11. Tomar foto}\par
+\end{figure}
+\subsection{CU10. Tomar foto}\par
 Es el escenario donde un usuario registrado toma una fotografía del escenario para guardarla.\par
 \textbf{Precondición:} Haber iniciado sesión correctamente y estar en la pantalla de cámara.\par
 \begin{itemize}
@@ -236,50 +207,48 @@ Es el escenario donde un usuario registrado toma una fotografía del escenario p
 	\item Al finalizar la creación del escenario el usuario puede visualizar en una rejilla todas las fotos que fueron tomadas.
 \end{itemize}
 
-\begin{figure}[h!]
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=8cm,height=4cm]{imagenes/analisis/cu/tomar_foto.jpg}
-	\caption{CU11. Tomar foto.}
+	\caption{CU10. Tomar foto.}
 	\label{fig:tomarfoto}
 \end{figure} 
 
-\subsection{CU12. Grabar video}\par
+\subsection{CU11. Grabar video}\par
 Es el escenario donde un usuario registrado puede grabar un video de la escena que esté creando.\par
 \textbf{Precondición:} Haber iniciado sesión correctamente y estar en la pantalla de cámara.\par
 \begin{itemize}
 	\item El usuario enfoca la cámara hacia donde desee tomar una fotografía.
 	\item El usuario selecciona el botón con el icono de video.
-	\item El sistema comienza a grabar lo que la cámara enfoca y el icono de video se convierte en un icono circular parpadeante.
-	\item El usuario selecciona nuevamente el botón.
+	\item El sistema comienza a grabar lo que la cámara enfoca.
+	\item El usuario selecciona nuevamente el botón de grabación.
 	\item El sistema guarda el video comprendido entre la primera vez que el usuario presionó el botón de video hasta la segunda vez.
-	\item El sistema muestra un pequeño mensaje emergente diciendo que la foto ha sido guardada con éxito.
+	\item El sistema muestra un pequeño mensaje emergente diciendo que el video ha sido guardada con éxito. Este mensaje tiene una opción para poder reproducir el video.
 	\item Al finalizar la creación del escenario el usuario puede visualizar en una rejilla todas las fotos que fueron tomadas incluyendo los videos que fueron grabados.
 \end{itemize}
 
-\begin{figure}[h!]
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=8cm,height=4cm]{imagenes/analisis/cu/grabar_video.jpg}
-	\caption{CU12. Grabar video.}
+	\caption{CU11. Grabar video.}
 	\label{fig:grabarvideo}
 \end{figure} 
 
-\subsection{CU13. Guardar escenario}\par
-Es el escenario donde un usuario crea el escenario de acuerdo a sus gustos y necesidades y procede a guardarlo para poder consultarlo en un futuro.\par
+\subsection{CU12. Guardar escenario}\par
+Tras haber tomado las fotos y videos necesarios, el usuario puede guardar este contenido para visualizarlo posteriormente.\par
 \textbf{Precondición:} Haber iniciado sesión correctamente y estar en la pantalla de cámara.\par
 \begin{itemize}
-	\item El usuario selecciona el botón ``Guardar escenario".
+	\item El usuario selecciona el botón de guardar.
 	\item La pantalla muestra una rejilla que contiene las fotos y videos realizados de la escena en forma de miniaturas.
-	\item El usuario selecciona una foto para mostrarla en pantalla completa, y presiona el icono ``X" para regresar a la rejilla.
-	\item El usuario selecciona un video para mostrarlo y reproducirlo en pantalla completa, y presiona el icono ``X" para regresar a la rejilla.
+	\item El usuario selecciona un elemento para visualizarlo en tamaño completo.
 	\item El usuario selecciona la opción ``Guardar escenario".
-	\item El sistema se encarga de guardar el contenido del escenario en la nube.
-	\item El sistema muestra la pantalla de visualización de escenarios con un mensaje emergente diciendo que el escenario fue guardado exitosamente.
-\end{itemize}
+	\item El sistema guarda la información del escenario para que pueda ser consultada después.
+\end{itemize} 
 
-\begin{figure}[h!]
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=8cm,height=4cm]{imagenes/analisis/cu/guardar_escenario.jpg}
-	\caption{CU13. Guardar escenario.}
+	\caption{CU12. Guardar escenario.}
 	\label{fig:guardarescenario}
 \end{figure} 
 

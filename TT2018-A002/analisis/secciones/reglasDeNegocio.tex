@@ -1,6 +1,6 @@
 
 \section{Reglas de negocio}
-El la siguiente sección se definen las reglas de negocio que estarán implicadas en el desarrollo del sistema.\par
+En esta siguiente sección se definen las reglas de negocio que estarán implicadas en el desarrollo del sistema.\par
 \subsection{BR1. Unicidad de usuarios}
 El email de los usuarios registrados en el sistema deberá ser único e irrepetible, pues constituye parte del par de credenciales de autenticatión al sistema (email y contraseña). Por lo tanto no es posible registrar una nueva cuenta con un email que ya ha sido registrado previamente.
 
@@ -24,3 +24,13 @@ Debe haber un mecanismo que asegure que solamente el usuario de una cuenta pueda
 	\item Se valida que el código ingresado por el usuario es el mismo que el generado previamente.
 	\item El usuario podrá volver a definir su contraseña si la validación anterior es correcta.
 \end{itemize}
+
+\subsection{BR4. Organización de muebles}
+Los muebles estarán organizados dentro de subcategorías, mismas que estarán contenidas en cateogrías, de tal forma que el menú de muebles de la aplicación esté en el siguiente orden jerárquico:
+\begin{itemize}
+	\item Categoría.
+	\item Subcategoría.
+	\item Mueble.
+\end{itemize}
+\subsection{BR5. Impuesto al Valor Agregado en cotizaciones}
+Las obras realizadas por diseñadores de interiores profesionales normalmente requieren la emisión de una factura, lo cual implica elevar el precio de la obra un 16\% correspondiente al IVA.

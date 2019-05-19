@@ -1,10 +1,10 @@
 \section{Iteración 0}
 \subsection{Exploración}
-En éste apartado se definirá el alcance del proyecto, los recursos u herramientas a usar, y las personas involucradas en su desarrollo, así como las pruebas de contexto realizadas en las tecnologías que usaremos.
+En este apartado se definirá el alcance del proyecto, los recursos u herramientas a usar, y las personas involucradas en su desarrollo, así como las pruebas de contexto realizadas en las tecnologías que usaremos.
 
 
 \subsubsection{Pruebas de contexto}
-Con el fin de conocer las capacidades de las plataforma ARCore y Vuforia (excluyendo ARKit debido a que su desarrollo en enfocado a sistemas iOS, ARToolkit porque no se centra en dispositivos móviles y a Wikitude por su reducido número de dispositivos compatibles), se realizaron pruebas de contexto definiendo las siguientes especificaciones:
+Con el fin de conocer las capacidades de las plataforma ARCore y Vuforia (excluyendo ARKit debido a que su desarrollo es enfocado a sistemas iOS, ARToolkit porque no se centra en dispositivos móviles y a Wikitude por su reducido número de dispositivos compatibles), se realizaron pruebas de contexto definiendo las siguientes especificaciones:
 \begin{itemize}
 	\item Nombre del dispositivo en el que se realizó
 	\item Fecha de prueba
@@ -56,18 +56,18 @@ Se desarrollará una aplicación móvil para dispositivos móviles que usen Andr
 El objetivo de la aplicación será lograr que el proceso de diseño de interiores sea más sencillo y rápido, esto a través de la eliminación y reducción de etapas del proceso implicado (véase \textit{Figura 1.1}).
 La aplicación cumplirá las siguientes funciones:\par
 \begin{itemize}
-	\item Tendrá un login, el cual tras la autenticación, permitirá guardar los escenarios que se vayan generando con sus respectivas fotografías.
+	\item Tendrá un login, el cual tras la autenticación, permitirá guardar los escenarios que se vayan generando con sus respectivas fotografías y videos.
+	\item Se podrá recuperar la contraseña de alguna cuenta en caso de ser olvidada.
 	\item Tendrá una opción alternativa para iniciar la aplicación sin pasar por un proceso de autenticación. En este caso sólo se podrá generar un entorno virtual con AR pero no se podrá guardar el escenario.
-	\item Tendrá un catálogo de muebles modelados y renderizados en 3D
+	\item Tendrá un catálogo de muebles modelados y renderizados en 3D gestionados por el usuario desde una plataforma web.
 	\item La aplicación podrá incluir hasta 100 muebles en escena al mismo tiempo.
-	\item Será posible cambiar las texturas de los muebles puestos en escena.
 	\item Los objetos puestos en escena tendrán posición relativa.
 	\item Los objetos puestos en escena tendrán una variación dinámica de luz, esto es, que conforme cambie la luz en el ambiente real, también lo hará de forma virtual en los objetos superpuestos.
 	\item La superposición de objetos no requerirá el uso hardware externo o marcadores físicos.
-	\item Será posible mover los muebles de lugar aún después de ser puestos en escena.
-	\item La aplicación podrá tomar fotografías de los escenarios de realidad aumentada que vaya generando el usuario.
+	\item Será posible mover los muebles de lugar aún después de ser puestos en escena, así como eliminarlos.
+	\item La aplicación podrá tomar fotografías y videos de los escenarios de realidad aumentada que vaya generando el usuario.
 	\item La aplicación permitirá asociar las fotografías tomadas a escenarios específicos. \textit{v.g. ``Diseño de interiores - Casa Loma Bonita"}
-	\item La aplicación permitirá crear proyectos el cual se conformará por varios escenarios, para el caso en el que un diseñador realice varios diseños de interiores para un mismo cliente.
+	\item La aplicación permitirá crear proyectos que se conformarán de varios escenarios, para el caso en el que un diseñador realice varios diseños de interiores para un mismo cliente.
 \end{itemize}
 \noindent
 El desarrollo del proyecto será finalizado en mayo de 2019.
@@ -81,13 +81,13 @@ En este punto ya está realizada la primer implementación de AR con la cual se 
 En esta iteración vamos hacer el diseño detallado de un mueble. De igual manera el modelado y renderizado será en Blender. Al final de ésta iteración tendremos una aplicación en Android que pueda desplegar a través de AR un mueble. El entregable de ésta iteración es el equivalente al planeado en el protocolo para TT I.
 
 \textbf{Iteración III} \par
-En esta iteración vamos a desarrollar el backend de la aplicación para poder realizar el login, registro de cuenta, recuperación de contraseña y el guardado de los escenarios que se vayan generando en la realidad aumentada. Al final de ésta iteración se tendrá el backend totalmente funcional para conectarlo con la aplicación a través del protocolo HTTP.
-
+En esta iteración vamos a desarrollar el backend de la aplicación para poder realizar el login, registro de cuenta, recuperación de contraseña y el guardado de los escenarios que se vayan generando en la realidad aumentada. Al final de esta iteración tendremos toda la parte del backend funcional que permitirá la gestión de cuentas de usuario.
+\clearpage
 \textbf{Iteración IV} \par
 En esta iteración vamos a generar varios modelos de muebles y presentarlos en la aplicación de tal forma que puedan ser seleccionables y puedan ser posicionados de forma individual en el mismo escenario. También vamos a implementar la funcionalidad de tomar una foto del entorno virtual generado y almacenarla en el dispositivo.
 
 \textbf{Iteración V} \par
-En esta iteración vamos a generar el acceso a usuarios a la aplicación, lo cual implica desarrollar un login, el registro de cuentas y un método de recuepración de contraseña.
+En esta iteración vamos a generar el acceso a usuarios a la aplicación, lo cual implica desarrollar un login, el registro de cuentas y un método de recuepración de contraseña para la parte del frontend e integrarlo con las funciones desarrolladas en la iteración III.
 
 \textbf{Iteración VI} \par
 En esta iteración vamos a desarrollar la forma de gestionar proyectos de clientes, desde los cuales se podrán crear escenarios.

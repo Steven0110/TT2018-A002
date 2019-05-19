@@ -5,9 +5,8 @@ En ésta iteración se realizó el frontend del login de ARF así como el backen
 %\subsection{Diagramación}
 \subsection{Desarrollo}
 El desarrollo de los módulos de backend mencionados se realizó sobre Lambdas de AWS. Cada módulo tiene su propia función. El objetivo de hacerlo de esta forma es brindarle escalabilidad al sistema pues el desarrollo se logra de forma modular.\par
-Cada uno de estos módulos es accesible a través del protocolo HTTP gracias a la API Gateway. La API Gateway es un módulo de Amazon Web Services que permite que los recursos de AWS sean accesibles desde el exterior, en éste caso, permite que la aplicación en Android pueda acceder a éstas funciones con una simple petición.\par
-Las Lambdas y la API Gateway están configuradas para que a través del método POST y el formato JSON la aplicación pueda comunicarse y usar las funciones almacenadas en la nube.\par
-El desarrollo de cada función en la nube se realizó con NodeJS v8.10.0. A continuación se describe cada módulo. \par
+Cada uno de estos módulos es accesible a través del protocolo HTTP gracias a la API Gateway. La API Gateway es un módulo de Amazon Web Services que permite que los recursos de AWS sean accesibles desde el exterior, en éste caso, permite que la aplicación en Android pueda acceder a estas funciones con una simple petición. Asimismo las imágenes de los escenarios son almacenadas en AWS S3.\par
+
 \subsubsection{Login}
 Se encarga de la funcionalidad del login de la aplicación. En la figura 4.29 se puede observar el diagrama del proceso de login.\par
 \begin{figure}[h!]
@@ -18,7 +17,7 @@ Se encarga de la funcionalidad del login de la aplicación. En la figura 4.29 se
 \end{figure}
 
 \subsubsection{Registro}
-Ésta función se encarga de registrar un nuevo usuario en la base de datos para que posteriormente pueda iniciar sesión en la aplicación. El modelado de este proceso se puede apreciar en la figura 4.32. \par
+Ésta función se encarga de registrar un nuevo usuario en la base de datos para que posteriormente pueda iniciar sesión en la aplicación. El modelado de este proceso se puede apreciar en la figura 4.30. \par
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=15cm,height=7cm]{imagenes/desarrollo/diagramas/BPMN_REGISTRAR_CUENTA.png}
@@ -28,12 +27,11 @@ Se encarga de la funcionalidad del login de la aplicación. En la figura 4.29 se
 \par
 
 \subsubsection{Guardar escenario}
-El objetivo de ésta función es poder almacenar los escenarios que vayan generando los usuarios para que después puedan ser visualizados desde la aplicación. En la figura 4.34 se puede apreciar el modelado del proceso de almacenamiento de escenario. \par
+El objetivo de ésta función es poder almacenar los escenarios que vayan generando los usuarios para que después puedan ser visualizados desde la aplicación. En la figura 4.31 se puede apreciar el modelado del proceso de almacenamiento de escenario. \par
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=13cm,height=7cm]{imagenes/desarrollo/diagramas/BPMN_STORESC.png}
 	\caption{Proceso de guardado de escenario.}
 	\label{fig:regsuccess}
 \end{figure}
-
-La función recibe como parámetros el id del usuario al que se va a asociar el escenario, el nombre del escenario y un array de imágenes en formato \textbf{Base64}. una vez recibidos estos atributos, la función se encarga de convertir las imágenes en formato binario para después guardarlas en un Bucket de AWS S3 (Simple Storage Service) que no es más que un contenedor de archivos. Una vez guardadas las imágenes en el Bucket, se obtienen los nombres y las URL de las imágenes guardadas. Los nombres sirven para guardar el escenario en una base de datos, y posteriormente poder recuperarlos del Bucket a través del nombre. Las URL de las imágenes se envían con el objetivo de poder visualizar el escenario guardado en el dispositivo móvil obteniendo las imágenes directamente del almacenamiento en la nube.
+\clearpage

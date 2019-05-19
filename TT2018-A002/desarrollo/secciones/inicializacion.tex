@@ -1,12 +1,12 @@
 \subsection{Inicialización}
-En ésta fase se describirá la linea base sobre la que se desarrollará el proyecto, esto significa, definir las herramientas y dispositivos con los que se realizará el desarrollo y testing, qué tecnologías vamos a usar y el planteamiento general del sistema.\par
+En esta fase se describirá la linea base sobre la que se desarrollará el proyecto, esto significa, definir las herramientas y dispositivos con los que se realizará el desarrollo y pruebas de la aplicación, qué tecnologías vamos a usar y el planteamiento general del sistema.\par
 \noindent
 \\
 \textbf{Herramientas y Tecnologías}:
 	\begin{itemize}
-			\item \textbf{Amazon Web Services.} Amazon Web Services (AWS) es una infraestructura de servicios en la nube usados para el desarrollo de sistemas. AWS tiene una gran cantidad de servicios útiles para el desarrollo de ARF de los cuales se usarán los siguientes para el desarrollo de ARF: S3 (almacenamiento), RDS (base de datos), Lambda (ejecución de código en la nube), API Gateway (comunicación con Lambda via internet).
-			\item \textbf{Android 8 Oreo y Android 7 Nougat.} Estas son las versiones de Android que son compatibles con ARCore 1.5
-			\item Android Studio 2.19
+			\item \textbf{Amazon Web Services.} Amazon Web Services (AWS) es una infraestructura de servicios en la nube usados para el desarrollo de sistemas. AWS tiene una gran cantidad de servicios útiles para el desarrollo de ARF de los cuales se usarán los siguientes para el desarrollo de ARF: S3 (almacenamiento), RDS (base de datos), Lambda (ejecución de código en la nube), API Gateway (comunicación con Lambda via internet), EC2 (procesamiento de información).
+			\item \textbf{Android 8 Oreo y Android 7 Nougat.} Estas son las versiones de Android que son compatibles con ARCore 1.5.
+			\item \textbf{Android Studio 2.19}. El IDE de desarrollo con el cual programaremos la aplicación móvil.
 			\item \textbf{ARCore 1.5.} Es una librería para el desarrollo de aplicaciones con realidad aumentada de Google. Tras las pruebas de contexto se eligió usar ARCore en su versión 1.5 que es la versión estable más actual.
 			\item \textbf{Blender 2.79.} Es un modelador y renderizador de objetos en 3D. Se usará para las primeras integraciones de ARCore donde utilizaremos modelos 3D de elaboración propia.
 			\item \textbf{GitHub.} Es un sistema de control de versiones que sirve para tener el código fuente centralizado en repositorios y que varias personas puedan actualizar simultáneamente el código de forma rápida y sencilla. El código de ARF estará alojado en un repositorio de GitHub.
@@ -21,6 +21,7 @@ En ésta fase se describirá la linea base sobre la que se desarrollará el proy
 	\item \textbf{PC} Procesador AMD Ryzen 7 1800X, 16GB de RAM, 1TB en disco duro, S.O. Windows 10
 	\item \textbf{Móvil.} Moto G6, procesador Snapdragon 450 a 1.8GHz, 3GB de RAM, 32GB de almacenamiento, S.O. Android 8.0
 	\item \textbf{Móvil.} Moto G6+, procesador Snapdragon 630 a 2.2GHz, 4GB de RAM, 32GB de almacenamiento, S.O. Android 8.0	
+	\item \textbf{Móvil.} Samsung S10, procesador Exynos 9820 a 2.73GHz, 8GB de RAM, 128GB de almacenamiento, S.O. Android 9.0
 \end{itemize}
 \noindent
 \textbf{Arquitectura}:
@@ -60,7 +61,7 @@ Además de la aplicación móvil, existe una plataforma web que se encuentra com
 \par
 Por otro lado se requerirá una base de datos que pueda almacenar los usuarios, proyectos, escenarios, categorías y subcategorías que se vayan generando. Para el tipo y cantidad de información que se requiere almacenar, una base de datos relacional en tercera forma normal cumple a ésta necesidad.
 %En las figuras  3.16, 3.17 y 3.18 se muestra el proceso de normalización la base de datos que se va a usar en ARF, misma que se encuentra en Amazon RDS mostrado en la figura 4.26.
-En las figura 3.16 se muestra el modelado de la base de datos que se va a usar en ARF, misma que se encuentra en Amazon RDS mostrado en la figura 4.26.
+En la figura 4.26 se muestra el modelado de la base de datos que se va a usar en ARF, misma que se encuentra en Amazon RDS mostrado en la figura 4.25.
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=16cm,height=8cm]{imagenes/desarrollo/arquitectura/ERD.png}
@@ -75,7 +76,9 @@ En las figura 3.16 se muestra el modelado de la base de datos que se va a usar e
 %\end{figure}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=16cm,height=8cm]{imagenes/desarrollo/arquitectura/ERD.png}
-	\caption{Tercera forma normal de la base de datos de ARF.}
+	\includegraphics[width=16cm,height=14cm]{imagenes/desarrollo/arquitectura/ERD.png}
+	\caption{Modelo Entidad-Relación de la base de datos de ARF.}
 	\label{fig:erd}
 \end{figure}
+
+\clearpage

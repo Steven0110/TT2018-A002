@@ -1,2 +1,18 @@
 tap
 plano
+optimizacion
+lentitud
+complejidad
+espacio
+efectivo
+entorno
+escenario
+proyecto
+plataforma de software
+iteración
+prueba de contexto
+modelo renderizado
+factura
+antropometría
+cotización
+escalabilidad
