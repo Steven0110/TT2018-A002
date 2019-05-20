@@ -1,18 +1,18 @@
-tap
-plano
-optimizacion
-lentitud
+antropometría
 complejidad
-espacio
+cotización
 efectivo
 entorno
-escenario
-proyecto
-plataforma de software
-iteración
-prueba de contexto
-modelo renderizado
-factura
-antropometría
-cotización
 escalabilidad
+escenario
+espacio
+factura
+iteración
+lentitud
+modelo renderizado
+optimizacion
+plano
+plataforma de software
+proyecto
+prueba de contexto
+tap
