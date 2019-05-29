@@ -44,15 +44,18 @@
 
     %%%%%%%   PORTADA   y RESUMEN   %%%%%%% Este es el contenido agregado de la secci\'on 2.
 
-    \include{portada} %incluye el archivo portada.tex
-    \include{presentacion}
-    \include{advertencia} %incluye el archivo portada.tex
+    \clearpage %Para iniciar con los arAbigos
+    \input{./portada} %incluye el archivo portada.tex
+    \input{./presentacion}
+    \input{./advertencia} %incluye el archivo portada.tex
     %\include{resumen} %Incluir resumen del documento (resumen.tex)
 
     %%%%%%%   INCLUIR ENCABEZADOS EN INDICES Y CAPITULOS   %%%%%%%
+    \clearpage %Para iniciar con los arAbigos
     \pagestyle{headings}
 
     %%%%%%%   NUMERACION EN CONTENIDO E INDICE DE TABLAS Y FIGURAS   %%%%%%%
+    \clearpage %Para iniciar con los arAbigos
     \pagenumbering{roman} %NUmeros romanos
     %\setcounter{page}{1} %Comienza en I por default, aquI se puedo modificar
 
